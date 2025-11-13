@@ -52,3 +52,8 @@ ${MAKE} -C ${GPU_MODULES_SOURCE}/gpu/natt -f Makefile O=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
 
+${MAKE} -C ${ROOT_DIR}/kernel_unisoc_p7885/drivers/input/touchscreen/gslx680 -f Makefile O=${BSP_KERNEL_OUT} \
+    ARCH=arm64  \
+    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
+    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
+    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
