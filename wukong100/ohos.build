@@ -1,0 +1,18 @@
+{
+  "parts": {
+    "product_wukong100": {
+      "module_list": [
+        "//vendor/revoview/wukong100/default_app_config:default_app_config",
+        "//vendor/revoview/wukong100/image_conf:custom_image_conf",
+        "//vendor/revoview/wukong100/preinstall-config:preinstall-config",
+        "//vendor/revoview/wukong100/resourceschedule:resourceschedule",
+        "//vendor/revoview/wukong100/etc:product_etc_conf",
+        "//vendor/revoview/wukong100/hals/audio:hdf_audio_config",
+        "//vendor/revoview/wukong100/hals/codec/:hdf_codec_config",
+        "//vendor/revoview/wukong100/hdf_config/uhdf:hdf_config",
+        "//vendor/revoview/wukong100/window_config:window_config"
+      ]
+    }
+  },
+  "subsystem": "product_wukong100"
+}
