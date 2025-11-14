@@ -18,7 +18,9 @@
       "components": [
         {
           "component": "selinux_adapter",
-          "features": []
+          "features": [
+            "selinux_adapter_enforce = false"
+          ]
         }
       ]
     },
