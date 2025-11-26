@@ -18,7 +18,9 @@
       "components": [
         {
           "component": "selinux_adapter",
-          "features": []
+          "features": [
+            "selinux_adapter_enforce = false"
+          ]
         }
       ]
     },
@@ -212,7 +214,8 @@
           "features": [
             "audio_framework_feature_dtmf_tone = true",
             "audio_framework_feature_opensl_es = true",
-            "audio_framework_feature_support_os_account = false"
+            "audio_framework_feature_support_os_account = false",
+            "audio_framework_feature_audiosuite_support = true"
           ]
         },
         {
@@ -344,9 +347,9 @@
         {
           "component": "graphic_2d",
           "features": [
-            "graphic_2d_feature_rs_enable_eglimage = true",
-            "graphic_2d_feature_use_texgine = true",
-            "graphic_2d_feature_upgrade_skia = true"
+            "graphic_2d_feature_rs_enable_eglimage = false",
+            "graphic_2d_feature_use_texgine = false",
+            "graphic_2d_feature_upgrade_skia = false"
           ]
         },
         {
