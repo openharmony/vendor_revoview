@@ -346,11 +346,7 @@
       "components": [
         {
           "component": "graphic_2d",
-          "features": [
-            "graphic_2d_feature_rs_enable_eglimage = false",
-            "graphic_2d_feature_use_texgine = false",
-            "graphic_2d_feature_upgrade_skia = false"
-          ]
+          "features": []
         },
         {
           "component": "graphics_effect",
