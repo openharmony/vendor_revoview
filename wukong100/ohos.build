@@ -6,6 +6,7 @@
         "//vendor/revoview/wukong100/image_conf:custom_image_conf",
         "//vendor/revoview/wukong100/preinstall-config:preinstall-config",
         "//vendor/revoview/wukong100/resourceschedule:resourceschedule",
+        "//vendor/revoview/wukong100/bootanimation:bootanimation_config",
         "//vendor/revoview/wukong100/etc:product_etc_conf",
         "//vendor/revoview/wukong100/hals/audio:hdf_audio_config",
         "//vendor/revoview/wukong100/hals/codec/:hdf_codec_config",
