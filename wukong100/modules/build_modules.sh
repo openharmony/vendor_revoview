@@ -63,9 +63,3 @@ ${MAKE} -C ${GPU_MODULES_SOURCE}/video/sprd-vpu -f Makefile O=${BSP_KERNEL_OUT} 
     BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
-
-${MAKE} -C ${GPU_MODULES_SOURCE}/video/sprd-vpu-power -f Makefile O=${BSP_KERNEL_OUT} \
-    ARCH=arm64  \
-    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
-    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
-    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
