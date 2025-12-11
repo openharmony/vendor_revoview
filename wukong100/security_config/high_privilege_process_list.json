@@ -100,6 +100,21 @@
             "name": "sys_installer_sa",
             "uid": "root",
             "gid": "root"
+        },
+        {
+            "name": "modem_control_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "cp_diskserver_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "channelmanager_service",
+            "uid": "root",
+            "gid": "root"
         }
     ]
 }
