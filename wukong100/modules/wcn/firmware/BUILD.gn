@@ -1,0 +1,25 @@
+
+import("//build/ohos.gni")
+import("//build/ohos/ndk/ndk.gni")
+#import("//vendor/${product_company}/${product_name}/product.gni")
+#import("//device/soc/${soc_company}/${soc_name}/soc.gni")
+#import("//device/soc/sprd/common/soc_common.gni")
+import("//device/platform/soc/common/platform_common.gni")
+
+ohos_prebuilt_executable("wcnmodem") {
+  source = "wcnmodem.bin"
+  install_enable = true
+  module_install_dir = "firmware"
+  install_images = [ platform_base_dir ]
+  subsystem_name = "${SUBSYSTEM_NAME}"
+  part_name = "${PART_NAME}"
+}
+
+ohos_prebuilt_executable("gnssmodem") {
+  source = "gnssmodem.bin"
+  install_enable = true
+  module_install_dir = "firmware"
+  install_images = [ platform_base_dir ]
+  subsystem_name = "${SUBSYSTEM_NAME}"
+  part_name = "${PART_NAME}"
+}

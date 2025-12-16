@@ -22,8 +22,12 @@ action("build_modules") {
   sources = [ module_source_dir ]
   sources += [ "//kernel_unisoc_p7885" ]
   outputs = [ "$root_build_dir/modules" ]
+  outputs += [ "$root_build_dir/modules/sprdbt_tty/sprdbt_tty.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko" ]
 
   outputs += [ "$root_build_dir/modules/mali_kbase/mali_kbase.ko" ]
+  ### spr_wcn
+  outputs += [ "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko" ]
   outputs += [ "$root_build_dir/modules/gslx680/gslx680.ko" ]
   outputs += [ "$root_build_dir/modules/vpu/vpu.ko" ]
   outputs += [ "$root_build_dir/modules/npu_img_vha/npu_img_vha.ko" ]
@@ -38,9 +42,103 @@ action("build_modules") {
   ]
 }
 
+ohos_prebuilt_executable("sprdbt_tty") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprdbt_tty/sprdbt_tty.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_etc("wcnmodem") {
+  source = "wcn/wcnmodem.bin"
+  module_install_dir = "firmware"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("gnssmodem") {
+  source = "wcn/gnssmodem.bin"
+  module_install_dir = "firmware"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("wifi_board_config") {
+  source = "wcn/wifi_board_config.ini"
+  module_install_dir = "firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_pskey_aa") {
+  source = "wcn/bt_configure_pskey_aa.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_rf_aa") {
+  source = "wcn/bt_configure_rf_aa.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_pskey") {
+  source = "wcn/bt_configure_pskey.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_rf") {
+  source = "wcn/bt_configure_rf.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("regulatory.db") {
+  source = "wcn/regulatory.db"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("regulatory.db.p7s") {
+  source = "wcn/regulatory.db.p7s"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_wlan_combo") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
 ohos_prebuilt_executable("mali_kbase") {
   deps = [ ":build_modules" ]
   source = "$root_build_dir/modules/mali_kbase/mali_kbase.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+# sprwcn
+ohos_prebuilt_executable("unisoc_wcn_bsp") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko"
   module_install_dir = "modules"
   install_images = [ chipset_base_dir ]
   part_name = "product_wukong100"
@@ -85,6 +183,20 @@ ohos_prebuilt_executable("sprd_vdsp") {
 
 group("modules") {
   deps = [
+    ### sprdwcn
+    ":unisoc_wcn_bsp",
+    ###
+    ":sprd_wlan_combo",
+    ":sprdbt_tty",
+    ":wcnmodem",
+    ":gnssmodem",
+    ":wifi_board_config",
+    ":bt_configure_pskey",
+    ":bt_configure_rf",
+    ":bt_configure_pskey_aa",
+    ":bt_configure_rf_aa",
+    ":regulatory.db",
+    ":regulatory.db.p7s",
     ":mali_kbase",
     ":gslx680",
     ":vpu",
