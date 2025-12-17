@@ -45,19 +45,20 @@ rm -rf ${BSP_MODULES_OUT}
 
 mkdir -p ${BSP_MODULES_OUT}
 
-
 export BSP_MODULE_DISP_VERSION="ums9620"
 ${MAKE} -C ${GPU_MODULES_SOURCE}/unisoc_platform/sprdwcn -f Makefile O=${BSP_KERNEL_OUT} \
     ARCH=arm64  \
     BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
 ${MAKE} -C ${GPU_MODULES_SOURCE}/wcn/wlan/wlan_combo -f Makefile O=${BSP_KERNEL_OUT} \
     ARCH=arm64  \
     CROSS_COMPILE=${BSP_KERNEL_CROSS_COMPILE} \
     BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
 ${MAKE} -C ${GPU_MODULES_SOURCE}/wcn/bluetooth/driver -f Makefile O=${BSP_KERNEL_OUT} \
     ARCH=arm64  \
     CROSS_COMPILE=${BSP_KERNEL_CROSS_COMPILE} \
