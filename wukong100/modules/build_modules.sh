@@ -98,3 +98,25 @@ ${MAKE} -C ${NPU_MODULES_SOURCE}/imgtec -f Makefile O=${BSP_KERNEL_OUT} \
     BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
+#################### ws73 build start ######################################
+mkdir -p ${BSP_MODULES_OUT}/ws73
+cp -rf ${GPU_MODULES_SOURCE}/ws73/sle ${BSP_MODULES_OUT}/ws73/sle
+
+export KERNELPATH=${BSP_KERNEL_OUT}
+echo "KERNELPATH = [$KERNELPATH]"
+export KERNELARCH=arm64
+export TOOLPREFIX_PATH=${ROOT_DIR}/prebuilts/gcc/linux-x86/aarch64/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/
+export TOOLPREFIX=${TOOLPREFIX_PATH}aarch64-linux-gnu-
+export WSCFG_KERNEL_DIR=${KERNELPATH}
+export WSCFG_ARCH_NAME=${KERNELARCH}
+export KSRC=${KERNELPATH}
+export WSCFG_CROSS_COMPILE=${TOOLPREFIX}
+
+${MAKE} -C ${BSP_MODULES_OUT}/ws73/sle -f Makefile  O=${BSP_KERNEL_OUT} \
+	BSP_MODULES_OUT=${BSP_MODULES_OUT} platform -j64
+
+${MAKE} -C ${BSP_MODULES_OUT}/ws73/sle -f Makefile  O=${BSP_KERNEL_OUT} \
+	BSP_MODULES_OUT=${BSP_MODULES_OUT} sle -j64
+
+#################### ws73 build end ######################################
