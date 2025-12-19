@@ -1,0 +1,88 @@
+#include "../sensor_common.hcs"
+root {
+    proximity_mn7991x_chip_config : sensorConfig {
+        match_attr = "hdf_sensor_proximity_mn7991x_driver";
+        sensorInfo :: sensorDeviceInfo {
+            sensorName = "proximity";
+            vendorName = "mn7991x"; // max string length is 16 bytes
+            sensorTypeId = 12; // enum SensorTypeTag
+            sensorId = 12; // user define sensor id
+            power = 230;
+        }
+        sensorBusConfig :: sensorBusInfo {
+            busType = 0; // 0:i2c 1:spi
+            busNum = 7;
+            busAddr = 0x41;
+            regWidth = 1; // 1byte
+        }
+        sensorIdAttr :: sensorIdInfo {
+            chipName = "mn7991x";
+            chipIdRegister = 0x04;
+            chipIdValue = 0x88;
+        }
+        sensorRegConfig {
+            /*  regAddr: register address
+                value: config register value
+                len: size of value
+                mask: mask of value
+                delay: config register delay time (ms)
+                opsType: enum SensorOpsType 0-none 1-read 2-write 3-read_check 4-update_bit
+                calType: enum SensorBitCalType 0-none 1-set 2-revert 3-xor 4-left shift 5-right shift
+                shiftNum: shift bits
+                debug: 0-no debug 1-debug
+                save: 0-no save 1-save
+            */
+            /* regAddr, value, mask, len, delay, opsType, calType, shiftNum, debug, save */
+            initSeqConfig = [
+                /* 基本初始化序列 */
+				0x03, 0x01, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x52, 0x25, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_LOCK: MN_PROX_LOCK | MN_PROX_PS_BSLN_SET | MN_PROX_CMP_RST */
+				0x52, 0x2,  0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_LOCK: MN_PROX_UN_LOCK | MN_PROX_PS_BSLN_RUN | MN_PROX_CMP_RUN */
+    
+				/* PS配置寄存器 */
+				0x4D, 0x00, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_INTTY: 默认配置 */
+				0x4B, 0x2328, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_GAINA: MN_PROX_PS_INTT_384 | MN_PROX_PS_GA_2 */
+				0x4F, 0xFFFF, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_GAINB: MN_PROX_PS_CH0_GD_1_4 | MN_PROX_PS_CH1_GD_1 */
+    
+				0x47, 0xE9, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_ILTL: 低阈值低位 */
+				0x48, 0x03, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_ILTH: 低阈值高位 */
+				0x49, 0xE8, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_IHTL: 高阈值低位 */
+				0x4A, 0x03, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* DEVREG_PROX_PS_IHTH: 高阈值高位 */
+				
+				0x00, 0x38, 0xFF, 1, 0, 2, 0, 0, 0, 0,  /* mode */
+    
+				/* 等待时间设置 */
+				0x01, 0x30, 0xF0, 1, 0, 2, 0, 0, 0, 0,   /* DEVREG_PROX_WAIT: MN_PROX_PWAIT_2_MS */
+				
+				0x02, 0x02, 0x1E, 1, 0, 2, 0, 0, 0, 0,
+				
+				0x40, 0x0A, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x41, 0x65, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x42, 0x02, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x43, 0x00, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x44, 0x00, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x45, 0x40, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x46, 0x7D, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				
+				0x51, 0x5F, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x03, 0x03, 0xFF, 1, 0, 2, 0, 0, 0, 0	
+            ];
+            enableSeqConfig = [
+                /* 使能传感器 - 进入工作模式 */
+				0x52, 0x25, 0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x52, 0x2,  0xFF, 1, 0, 2, 0, 0, 0, 0,
+				0x03, 0x01, 0xFF, 1, 100, 2, 0, 0, 0, 0,  /* DEVREG_PROX_OP: MN_PROX_OP_ACTIVE */
+				0x00, 0x03, 0xFF, 1, 0, 2, 0, 0, 0, 0,    /* DEVREG_PROX_MODE: MN_PROX_MODE_ALS_PS */
+				0x01, 0x30, 0xF0, 1, 0, 2, 0, 0, 0, 0,
+				0x03, 0x02, 0xFF, 1, 0, 2, 0, 0, 0, 0
+            ];
+            disableSeqConfig = [
+                /* 禁用传感器 - 进入休眠模式 */
+				0x03, 0x01, 0xFF, 1, 100, 2, 0, 0, 0, 0,  /* DEVREG_PROX_OP: MN_PROX_OP_SLEEP */
+				0x00, 0x38, 0xFF, 1, 100, 2, 0, 0, 0, 0,
+				0x01, 0x30, 0xF0, 1, 0, 2, 0, 0, 0, 0,     /* DEVREG_PROX_MODE: MN_PROX_MODE_OFF */
+				0x03, 0x03, 0xFF, 1, 100, 2, 0, 0, 0, 0
+            ];
+        }
+    }
+}

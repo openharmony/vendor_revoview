@@ -1,0 +1,133 @@
+#include "../sensor_common.hcs"
+root {
+    gyro_mic6200_chip_config : sensorConfig {
+        match_attr = "hdf_sensor_gyro_mic6200_driver";
+        sensorInfo :: sensorDeviceInfo {
+            sensorName = "gyroscope";
+            vendorName = "memsic_mic6200"; // max string length is 16 bytes
+            sensorTypeId = 2; // SENSOR_TYPE_GYROSCOPE
+            sensorId = 2; // user define sensor id
+            power = 170;
+            minDelay = 2500000; // nanosecond, 2.5ms (400Hz)
+            maxDelay = 320000000; // nanosecond, 320ms (3.125Hz)
+        }
+        sensorBusConfig :: sensorBusInfo {
+            busType = 0; // 0:i2c 1:spi
+            busNum = 5; // I2C bus 5
+            busAddr = 0x6c;
+            regWidth = 1; // 1byte
+        }
+        sensorIdAttr :: sensorIdInfo {
+            chipName = "mic6200";
+            chipIdRegister = 0x00;
+            chipIdValue = 0xF9;
+        }
+        sensorDirection {
+            direction = 1; // chip direction range of value:0-7
+            /* <sign> 1:negative  0:positive
+               <map> 0:AXIS_X  1:AXIS_Y  2:AXIS_Z
+            */
+            /* sign[AXIS_X], sign[AXIS_Y], sign[AXIS_Z], map[AXIS_X], map[AXIS_Y], map[AXIS_Z] */
+            convert = [
+                0, 0, 0, 0, 1, 2,
+                1, 0, 0, 1, 0, 2,
+                0, 0, 1, 0, 1, 2,
+                0, 1, 0, 1, 0, 2,
+                1, 0, 1, 0, 1, 2,
+                0, 0, 1, 1, 0, 2,
+                0, 1, 1, 0, 1, 2,
+                1, 1, 1, 1, 0, 2
+            ];
+        }
+        sensorRegConfig {
+            /*  regAddr: register address
+                value: config register value
+                len: size of value
+                mask: mask of value
+                delay: config register delay time (ms)
+                opsType: enum SensorOpsType 0-none 1-read 2-write 3-read_check 4-update_bit
+                calType: enum SensorBitCalType 0-none 1-set 2-revert 3-xor 4-left shift 5-right shift
+                shiftNum: shift bits
+                debug: 0-no debug 1-debug
+                save: 0-no save 1-save
+            */
+            /* regAddr, value, mask, len, delay, opsType, calType, shiftNum, debug, save */
+            initSeqConfig = [
+                0xFF,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x40,    0x33, 0xFF,   1,      0,      2,       0,        0,     0,    0,
+                0x23,    0x80, 0xFF,   1,      0,      2,       0,        0,     0,    0,
+                0x40,    0x33, 0xFF,   1,      0,      2,       0,        0,     0,    0,
+                0x23,    0x77, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x23,    0x03, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x23,    0x0B, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x49,    0xC8, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x4B,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x4C,    0x0B, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x4D,    0x0B, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x4E,    0x0B, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x52,    0xA7, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x56,    0x5A, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x59,    0x84, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x5C,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x5B,    0x50, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xE7,    0xAA, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x7E,    0x03, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF4,    0xA2, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF5,    0x1C, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF7,    0x55, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF8,    0x55, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xD8,    0x10, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xDC,    0x18, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xDB,    0x3F, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xE6,    0x0F, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xE1,    0x47, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xE3,    0x7E, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xE0,    0x50, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xFF,    0x02, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x9E,    0xF0, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xAF,    0x10, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xA1,    0xA4, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xA6,    0x20, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xC8,    0x3F, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xFF,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x57,    0x08, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x57,    0x88, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x57,    0x08, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x54,    0x23, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x54,    0x2B, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x54,    0x23, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x50,    0x81, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x40,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x1D,    0x04, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x53,    0xD3, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF6,    0x29, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0xF9,    0xA2, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x47,    0x20, 0xFF,   1,      5,      2,       0,        0,     0,    0
+            ];
+            enableSeqConfig = [
+                0xFF,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x40,    0x31, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x42,    0x42, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x44,    0x12, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x46,    0x80, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x47,    0x24, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x48,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x45,    0x11, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x74,    0x15, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x75,    0x01, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x76,    0x29, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x77,    0x02, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x78,    0x15, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x79,    0x01, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x7A,    0xA5, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x7B,    0xDC, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x7C,    0xF7, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x7D,    0x60, 0xFF,   1,      5,      2,       0,        0,     0,    0
+            ];
+            disableSeqConfig = [
+                0xFF,    0x00, 0xFF,   1,      5,      2,       0,        0,     0,    0,
+                0x40,    0x11, 0xFF,   1,      5,      2,       0,        0,     0,    0
+            ];
+        }
+    }
+}
