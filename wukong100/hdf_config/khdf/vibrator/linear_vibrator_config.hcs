@@ -4,7 +4,7 @@ root {
             match_attr = "hdf_linear_vibrator_driver";
             VibratorBusConfig {
                 busType = 1;    // 0:i2c 1:gpio
-                busNum = 154;
+                busNum = 63;
             }
             VibratorChipConfig {
                 isSupportIntensity = 0;    /* setting intensity capability. 1 indicates support,
