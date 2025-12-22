@@ -870,6 +870,7 @@
                     deviceMatchAttr = "hdf_linear_vibrator_driver";
                 }
             }
+            /*
             device_drv2605l_vibrator :: device {
                 device0 :: deviceNode {
                     policy = 1;
@@ -881,6 +882,7 @@
                     deviceMatchAttr = "hdf_drv2605l_linear_vibrator_driver";
                 }
             }
+            */
         }
         light :: host {
             hostName = "light_host";
