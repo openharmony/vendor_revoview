@@ -66,6 +66,24 @@ ${MAKE} -C ${GPU_MODULES_SOURCE}/wcn/bluetooth/driver -f Makefile O=${BSP_KERNEL
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
 
+${MAKE} -C ${ROOT_DIR}/unisoc_p7885_property/modules/wcn/gnss/unisoc_gnss/gnss_common_ctl  -f Makefile O=${BSP_KERNEL_OUT} \
+    ARCH=arm64  \
+    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
+    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
+    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
+${MAKE} -C ${ROOT_DIR}/unisoc_p7885_property/modules/wcn/gnss/unisoc_gnss/gnss_dbg  -f Makefile O=${BSP_KERNEL_OUT} \
+    ARCH=arm64  \
+    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
+    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
+    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
+${MAKE} -C ${ROOT_DIR}/unisoc_p7885_property/modules/wcn/gnss/unisoc_gnss/gnss_pmnotify_ctl  -f Makefile O=${BSP_KERNEL_OUT} \
+    ARCH=arm64  \
+    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
+    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
+    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
 export MALI_PLATFORM_NAME=qogirn6pro
 ${MAKE} -C ${GPU_MODULES_SOURCE}/gpu/natt -f Makefile O=${BSP_KERNEL_OUT} \
     ARCH=arm64  \
@@ -94,6 +112,12 @@ ${MAKE} -C ${NPU_MODULES_SOURCE}/vdsp -f Makefile O=${BSP_KERNEL_OUT} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
 
 ${MAKE} -C ${NPU_MODULES_SOURCE}/imgtec -f Makefile O=${BSP_KERNEL_OUT} \
+    ARCH=arm64  \
+    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
+    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
+    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
+
+${MAKE} -C ${ROOT_DIR}/unisoc_p7885_property/modules/input/misc/prox_with_ldo  -f Makefile O=${BSP_KERNEL_OUT} \
     ARCH=arm64  \
     BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
