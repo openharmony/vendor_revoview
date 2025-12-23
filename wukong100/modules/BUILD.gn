@@ -26,8 +26,14 @@ action("build_modules") {
   outputs += [ "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko" ]
 
   outputs += [ "$root_build_dir/modules/mali_kbase/mali_kbase.ko" ]
+  outputs += [ "$root_build_dir/modules/prox_with_ldo/prox_with_ldo.ko" ]
   ### spr_wcn
   outputs += [ "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko" ]
+  ### sprd_gnss
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_common_ctl_all/unisoc_gnss_common_ctl_all.ko" ]
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_dbg/unisoc_gnss_dbg.ko" ]
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_pmnotify_ctl/unisoc_gnss_pmnotify_ctl.ko" ]
+
   outputs += [ "$root_build_dir/modules/gslx680/gslx680.ko" ]
   outputs += [ "$root_build_dir/modules/vpu/vpu.ko" ]
   outputs += [ "$root_build_dir/modules/npu_img_vha/npu_img_vha.ko" ]
@@ -138,7 +144,34 @@ ohos_prebuilt_executable("mali_kbase") {
   install_enable = true
 }
 
-# sprwcn
+###### sprd_gnss
+ohos_prebuilt_executable("unisoc_gnss_common_ctl_all") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_common_ctl_all/unisoc_gnss_common_ctl_all.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("unisoc_gnss_dbg") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_dbg/unisoc_gnss_dbg.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("unisoc_gnss_pmnotify_ctl") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_pmnotify_ctl/unisoc_gnss_pmnotify_ctl.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
 ohos_prebuilt_executable("unisoc_wcn_bsp") {
   deps = [ ":build_modules" ]
   source = "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko"
@@ -246,11 +279,24 @@ ohos_prebuilt_executable("wow") {
   part_name = "product_wukong100"
   install_enable = true
 }
+
+ohos_prebuilt_executable("prox_with_ldo") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/prox_with_ldo/prox_with_ldo.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
 group("modules") {
   deps = [
     ### sprdwcn
     ":unisoc_wcn_bsp",
     ###
+    ":unisoc_gnss_common_ctl_all",
+    ":unisoc_gnss_dbg",
+    ":unisoc_gnss_pmnotify_ctl",
     ":sprd_wlan_combo",
     ":sprdbt_tty",
     ":wcnmodem",
@@ -274,5 +320,6 @@ group("modules") {
     ":btc_cali",
     ":wifi_cali",
     ":wow",
+    ":prox_with_ldo",
   ]
 }

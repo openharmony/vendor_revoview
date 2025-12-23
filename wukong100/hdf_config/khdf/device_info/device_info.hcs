@@ -437,26 +437,15 @@
                     deviceMatchAttr = "hdf_sensor_accel_driver";
                 }
             }
-            device_sensor_mxc6655xa :: device {
+            device_sensor_acc_mic6200 :: device {
                 device0 :: deviceNode {
                     policy = 1;
                     priority = 120;
                     preload = 0;
                     permission = 0664;
-                    moduleName = "HDF_SENSOR_ACCEL_MXC6655XA";
-                    serviceName = "hdf_accel_mxc6655xa";
-                    deviceMatchAttr = "hdf_sensor_accel_mxc6655xa_driver";
-                }
-            }
-            device_sensor_accel_bmi270 :: device {
-                device0 :: deviceNode {
-                    policy = 1;
-                    priority = 120;
-                    preload = 0;
-                    permission = 0664;
-                    moduleName = "HDF_SENSOR_ACCEL_BMI270";
-                    serviceName = "hdf_accel_bmi270";
-                    deviceMatchAttr = "hdf_sensor_accel_bmi270_driver";
+                    moduleName = "HDF_SENSOR_ACCEL_MIC6200";
+                    serviceName = "hdf_accel_mic6200";
+                    deviceMatchAttr = "hdf_sensor_accel_mic6200_driver";
                 }
             }
             device_sensor_gyro :: device {
@@ -470,15 +459,15 @@
                     deviceMatchAttr = "hdf_sensor_gyro_driver";
                 }
             }
-            device_sensor_gyro_bmi270 :: device {
+            device_sensor_gyro_mic6200 :: device {
                 device0 :: deviceNode {
                     policy = 1;
                     priority = 120;
                     preload = 0;
                     permission = 0664;
-                    moduleName = "HDF_SENSOR_GYRO_BMI270";
-                    serviceName = "hdf_gyro_bmi270";
-                    deviceMatchAttr = "hdf_sensor_gyro_bmi270_driver";
+                    moduleName = "HDF_SENSOR_GYRO_MIC6200";
+                    serviceName = "hdf_gyro_mic6200";
+                    deviceMatchAttr = "hdf_sensor_gyro_mic6200_driver";
                 }
             }
             device_sensor_gas :: device {
@@ -536,15 +525,15 @@
                     deviceMatchAttr = "hdf_sensor_als_driver";
                 }
             }
-            device_sensor_bh1745 :: device {
+            device_sensor_mn7991x :: device {
                 device0 :: deviceNode {
                     policy = 1;
                     priority = 120;
                     preload = 0;
                     permission = 0664;
-                    moduleName = "HDF_SENSOR_ALS_BH1745";
-                    serviceName = "hdf_als_bh1745";
-                    deviceMatchAttr = "hdf_sensor_als_bh1745_driver";
+                    moduleName = "HDF_SENSOR_ALS_MN7991X";
+                    serviceName = "hdf_als_mn7991x";
+                    deviceMatchAttr = "hdf_sensor_als_mn7991x_driver";
                 }
             }
             device_sensor_proximity :: device {
@@ -558,15 +547,15 @@
                     deviceMatchAttr = "hdf_sensor_proximity_driver";
                 }
             }
-            device_sensor_apds9960 :: device {
+            device_sensor_mn7991x_prox :: device {
                 device0 :: deviceNode {
                     policy = 1;
                     priority = 120;
                     preload = 0;
                     permission = 0664;
-                    moduleName = "HDF_SENSOR_PROXIMITY_APDS9960";
-                    serviceName = "hdf_proximity_apds9960";
-                    deviceMatchAttr = "hdf_sensor_proximity_adps9960_driver";
+                    moduleName = "HDF_SENSOR_PROXIMITY_MN7991X";
+                    serviceName = "hdf_proximity_mn7991x";
+                    deviceMatchAttr = "hdf_sensor_proximity_mn7991x_driver";
                 }
             }
             device_sensor_magnetic :: device {
@@ -580,15 +569,15 @@
                     deviceMatchAttr = "hdf_sensor_magnetic_driver";
                 }
             }
-            device_sensor_lsm303 :: device {
+            device_sensor_mmc5617 :: device {
                 device0 :: deviceNode {
                     policy = 1;
                     priority = 120;
                     preload = 0;
                     permission = 0664;
-                    moduleName = "HDF_SENSOR_MAGNETIC_LSM303";
-                    serviceName = "hdf_magnetic_lsm303";
-                    deviceMatchAttr = "hdf_sensor_magnetic_lsm303_driver";
+                    moduleName = "HDF_SENSOR_MAGNETIC_MMC5617";
+                    serviceName = "hdf_magnetic_mmc5617";
+                    deviceMatchAttr = "hdf_sensor_magnetic_mmc5617_driver";
                 }
             }
             device_sensor_temperature :: device {
