@@ -19,7 +19,7 @@
                 <pipe name="primary_output" role="output">
                     <paProp lib="libmodule-hdi-sink.z.so" role="sink" fixed_latency="1" render_in_idle_state="1" moduleName="Speaker"/>
                     <streamProps>
-                        <streamProp format="s16le" sampleRates="44100" channelLayout="CH_LAYOUT_STEREO" bufferSize="4096" supportDevices="Speaker_Out, Wired_Headset_Out, Wired_Headphones_Out"/>
+                        <streamProp format="s16le" sampleRates="48000" channelLayout="CH_LAYOUT_STEREO" bufferSize="4096" supportDevices="Speaker_Out, Wired_Headset_Out, Wired_Headphones_Out"/>
                     </streamProps>
                     <attributes>
                         <attribute name="preload" value="true"/>
@@ -29,7 +29,7 @@
                 <pipe name="primary_input" role="input">
                     <paProp lib="libmodule-hdi-source.z.so" role="source" moduleName="Built_in_mic"/>
                     <streamProps>
-                        <streamProp format="s16le" sampleRates="44100" channelLayout="CH_LAYOUT_STEREO" bufferSize="8192" supportDevices="Builtin_Mic_In, Wired_Headset_In"/>
+                        <streamProp format="s16le" sampleRates="22050" channelLayout="CH_LAYOUT_STEREO" bufferSize="4096" supportDevices="Builtin_Mic_In, Wired_Headset_In"/>
                     </streamProps>
                     <attributes>
                         <attribute name="flag" value="AUDIO_INPUT_FLAG_NORMAL"/>
