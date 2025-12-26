@@ -106,7 +106,7 @@
     <globalConfigs>
         <defaultOutput adapter="primary" pipe="primary_output" device="Speaker"/>
         <commonConfigs>
-            <attribute name="updateRouteSupport" value="false"/>
+            <attribute name="updateRouteSupport" value="true"/>
             <attribute name="maxRendereres" value="128"/>
             <attribute name="maxCapturers" value="16"/>
         </commonConfigs>
