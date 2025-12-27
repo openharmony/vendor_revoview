@@ -666,5 +666,21 @@
                 }
             }
         }
+        nnrt :: host {
+            hostName = "nnrt_host";
+            priority = 50;
+            uid = "";
+            gid = "";
+            caps = ["DAC_OVERRIDE", "DAC_READ_SEARCH"];
+            nnrt_device :: device {
+                device0 :: deviceNode {
+                    policy = 2;
+                    priority = 100;
+                    preload = 0;
+                    moduleName = "libnnrt_driver.z.so";
+                    serviceName = "nnrt_device_service";
+                }
+            }
+        }
     }
 }

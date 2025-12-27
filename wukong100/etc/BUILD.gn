@@ -27,9 +27,31 @@ ohos_prebuilt_etc("para_for_sys_prod") {
   part_name = "product_wukong100"
 }
 
+ohos_prebuilt_etc("passwd") {
+  source = "./passwd"
+  install_images = [
+    "system",
+    "updater",
+  ]
+  part_name = "product_wukong100"
+  subsystem_name = "product_wukong100"
+}
+
+ohos_prebuilt_etc("group") {
+  source = "./group"
+  install_images = [
+    "system",
+    "updater",
+  ]
+  part_name = "product_wukong100"
+  subsystem_name = "product_wukong100"
+}
+
 group("product_etc_conf") {
   deps = [
     ":para_for_chip_prod",
     ":para_for_sys_prod",
+    ":passwd",
+    ":group",
   ]
 }
