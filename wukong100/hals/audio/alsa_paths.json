@@ -131,6 +131,18 @@
                             "value": "27 27"
                         },
                         {
+                            "name": "Inter PA Config",
+                            "value": "303"
+                        },
+                        {
+                            "name": "DSP VBC Profile Select",
+                            "value": "1232928768"
+                        },
+                        {
+                            "name": "VBC_VOLUME",
+                            "value": "0"
+                        },
+                        {
                             "name": "DAC Gain DAC Playback Volume",
                             "value": "3"
                         },
@@ -219,6 +231,10 @@
                         {
                             "name": "AUD ADC0R Switch",
                             "value": "1"
+                        },
+                        {
+                            "name": "Inter PA Config",
+                            "value": "303"
                         },
                         {
                             "name": "ADC_1 Gain ADC_1 Capture Volume",
@@ -755,19 +771,35 @@
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "name": "DAC LRCLK Select",
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "name": "HPL Mixer DACLHPL Switch",
                             "value": "1"
                         },
                         {
-                            "name": "DAC Gain DAC Playback Volume",
-                            "value": "2"
+                            "name": "HPR Mixer DACRHPR Switch",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HPL EAR Sel",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HP Virt Switch",
+                            "value": "1"
                         },
                         {
                             "name": "Speaker Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "Speaker1 Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "ag_iis0_ext_sel_v2",
                             "value": "1"
                         },
                         {
@@ -815,6 +847,18 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC_IIS_TX0_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "value": "1"
+                        },
+                        {
                             "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
                             "value": "0"
                         },
@@ -835,67 +879,31 @@
                             "value": "2"
                         },
                         {
-                            "name": "SmartAmp Boost",
-                            "value": "0"
+                            "name": "VBC DAC0 DG Set",
+                            "value": "27 27"
                         },
                         {
-                            "name": "DAC LRCLK Select",
-                            "value": "0"
+                            "name": "Inter PA Config",
+                            "value": "303"
                         },
                         {
-                            "name": "AO Gain AO Playback Volume",
-                            "value": "4"
-                        },
-                        {
-                            "name": "HPL Gain HPL Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "HPR Gain HPR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "EAR Gain EAR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "AO Mixer AOL Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AO Mixer AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AOL EAR Sel",
-                            "value": "1"
-                        },
-                        {
-                            "name": "DA AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "IVSENCE_FUNC_DSP",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis0_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis1_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC ADC0 DG Set",
-                            "value": "127 127"
-                        },
-                        {
-                            "name": "aw87xxx_profile_switch_0",
-                            "value": "0"
+                            "name": "DSP VBC Profile Select",
+                            "value": "1232928768"
                         },
                         {
                             "name": "VBC_VOLUME",
+                            "value": "0"
+                        },
+                        {
+                            "name": "DAC Gain DAC Playback Volume",
+                            "value": "3"
+                        },
+                        {
+                            "name": "HPL Gain HPL Playback Volume",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPR Gain HPR Playback Volume",
                             "value": "0"
                         }
                     ],
@@ -915,19 +923,19 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC ADC0 DG Set",
+                            "value": "24 24"
+                        },
+                        {
+                            "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
+                            "value": "2"
+                        },
+                        {
                             "name": "VBC_IIS_RX2_WD_SEL",
                             "value": "1"
                         },
                         {
-                            "name": "ag_iis0_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
                             "name": "ag_iis1_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_INF_SYS_SEL",
                             "value": "1"
                         },
                         {
@@ -939,23 +947,15 @@
                             "value": "1"
                         },
                         {
-                            "name": "Speaker Function",
-                            "value": "1"
+                            "name": "ADD0 DATA SEL",
+                            "value": "2"
                         },
                         {
                             "name": "Mic Function",
                             "value": "1"
                         },
                         {
-                            "name": "S_NORMAL_AP01_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_NORMAL_AP01_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_NORMAL_AP23_P_CODEC SWITCH",
                             "value": "1"
                         },
                         {
@@ -967,23 +967,7 @@
                             "value": "1"
                         },
                         {
-                            "name": "S_FAST_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_OFFLOAD_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOICE_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_VOICE_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOIP_P_CODEC SWITCH",
                             "value": "1"
                         },
                         {
@@ -991,27 +975,7 @@
                             "value": "1"
                         },
                         {
-                            "name": "S_FM_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_LOOP_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_LOOP_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_FM_DSP_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOICE_PCM_P SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_FAST_P_SMART_AMP SWITCH",
                             "value": "1"
                         },
                         {
@@ -1027,48 +991,20 @@
                             "value": "1"
                         },
                         {
+                            "name": "Inter PA Config",
+                            "value": "303"
+                        },
+                        {
                             "name": "ADC_1 Gain ADC_1 Capture Volume",
                             "value": "6"
                         },
                         {
                             "name": "ADC_2 Gain ADC_2 Capture Volume",
-                            "value": "7"
+                            "value": "6"
                         },
                         {
                             "name": "ADC_3 Gain ADC_3 Capture Volume",
                             "value": "6"
-                        },
-                        {
-                            "name": "AO Gain AO Playback Volume",
-                            "value": "4"
-                        },
-                        {
-                            "name": "AO Mixer AOL Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AO Mixer AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AOL EAR Sel",
-                            "value": "1"
-                        },
-                        {
-                            "name": "DA AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "HPL Gain HPL Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "HPR Gain HPR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "EAR Gain EAR Playback Volume",
-                            "value": "12"
                         }
                     ]
                 }
@@ -1076,190 +1012,6 @@
             "ringtone-playback": [
                 {
                     "Speaker": [
-                        {
-                            "name": "VBC_IIS_TX0_WD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_TX1_WD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_MASTER_ENALBE",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_IIS_MST_SEL_0_TYPE",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_MUX_DAC1_IIS_PORT_SEL",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_MUX_IIS3_PORT_DO_SEL",
-                            "value": "2"
-                        },
-                        {
-                            "name": "VBC_MUX_MST_IIS0_PORT_DO_SEL",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_MUX_IIS2_PORT_DO_SEL",
-                            "value": "2"
-                        },
-                        {
-                            "name": "VBC_MUX_IIS0_PORT_DO_SEL",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_IIS_RX0_WD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_RX1_WD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_RX2_WD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_MUX_ADC0_IIS_PORT_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_MUX_ADC2_IIS_PORT_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_MUX_ADC3_IIS_PORT_SEL",
-                            "value": "3"
-                        },
-                        {
-                            "name": "VBC_SRC_BT_DAC",
-                            "value": "48000"
-                        },
-                        {
-                            "name": "VBC_SRC_BT_ADC",
-                            "value": "48000"
-                        },
-                        {
-                            "name": "VBC_VOLUME",
-                            "value": "0"
-                        },
-                        {
-                            "name": "ADC_1 Gain ADC_1 Capture Volume",
-                            "value": "7"
-                        },
-                        {
-                            "name": "ADC_2 Gain ADC_2 Capture Volume",
-                            "value": "7"
-                        },
-                        {
-                            "name": "ADC_3 Gain ADC_3 Capture Volume",
-                            "value": "6"
-                        },
-                        {
-                            "name": "DAC Gain DAC Playback Volume",
-                            "value": "2"
-                        },
-                        {
-                            "name": "ag_iis2_ext_sel_v2",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC DAC0 DSP MDG Set",
-                            "value": "0 0"
-                        },
-                        {
-                            "name": "VBC DAC1 DSP MDG Set",
-                            "value": "0 0"
-                        },
-                        {
-                            "name": "VBC DAC0 AUD MDG Set",
-                            "value": "0 0"
-                        },
-                        {
-                            "name": "VBC DAC0 AUD23 MDG Set",
-                            "value": "0 0"
-                        },
-                        {
-                            "name": "VBC_UL_MUTE",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_DL_MUTE",
-                            "value": "0"
-                        },
-                        {
-                            "name": "VBC_IIS_TX0_LRMOD_SEL",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_RX2_LRMOD_SEL",
-                            "value": "0"
-                        },
-                        {
-                            "name": "DAC LRCLK Select",
-                            "value": "0"
-                        },
-                        {
-                            "name": "ADC LRCLK Select",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ADC1 LRCLK Select",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOICE_P_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_VOIP_P_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_LOOP_P_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_FAST_P_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_NORMAL_AP01_P_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_CAPTURE_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_VOICE_C_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_VOIP_C_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_LOOP_C_BT SWITCH",
-                            "value": "0"
-                        },
-                        {
-                            "name": "S_BTSCO_CAP_DSP_C SWITCH",
-                            "value": "0"
-                        },
                         {
                             "name": "agdsp_access_en",
                             "value": "1"
@@ -1269,19 +1021,35 @@
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "name": "DAC LRCLK Select",
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "name": "HPL Mixer DACLHPL Switch",
                             "value": "1"
                         },
                         {
-                            "name": "DAC Gain DAC Playback Volume",
-                            "value": "2"
+                            "name": "HPR Mixer DACRHPR Switch",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HPL EAR Sel",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HP Virt Switch",
+                            "value": "1"
                         },
                         {
                             "name": "Speaker Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "Speaker1 Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "ag_iis0_ext_sel_v2",
                             "value": "1"
                         },
                         {
@@ -1329,6 +1097,18 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC_IIS_TX0_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "value": "1"
+                        },
+                        {
                             "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
                             "value": "0"
                         },
@@ -1349,63 +1129,31 @@
                             "value": "2"
                         },
                         {
-                            "name": "SmartAmp Boost",
+                            "name": "VBC DAC0 DG Set",
+                            "value": "27 27"
+                        },
+                        {
+                            "name": "Inter PA Config",
+                            "value": "303"
+                        },
+                        {
+                            "name": "DSP VBC Profile Select",
+                            "value": "1232928768"
+                        },
+                        {
+                            "name": "VBC_VOLUME",
                             "value": "0"
                         },
                         {
-                            "name": "DAC LRCLK Select",
-                            "value": "0"
-                        },
-                        {
-                            "name": "AO Gain AO Playback Volume",
-                            "value": "4"
+                            "name": "DAC Gain DAC Playback Volume",
+                            "value": "3"
                         },
                         {
                             "name": "HPL Gain HPL Playback Volume",
-                            "value": "12"
+                            "value": "0"
                         },
                         {
                             "name": "HPR Gain HPR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "EAR Gain EAR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "AO Mixer AOL Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AO Mixer AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AOL EAR Sel",
-                            "value": "1"
-                        },
-                        {
-                            "name": "DA AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "IVSENCE_FUNC_DSP",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis0_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis1_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC ADC0 DG Set",
-                            "value": "127 127"
-                        },
-                        {
-                            "name": "aw87xxx_profile_switch_0",
                             "value": "0"
                         }
                     ],
@@ -1419,19 +1167,19 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC ADC0 DG Set",
+                            "value": "24 24"
+                        },
+                        {
+                            "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
+                            "value": "2"
+                        },
+                        {
                             "name": "VBC_IIS_RX2_WD_SEL",
                             "value": "1"
                         },
                         {
-                            "name": "ag_iis0_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
                             "name": "ag_iis1_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC_IIS_INF_SYS_SEL",
                             "value": "1"
                         },
                         {
@@ -1443,23 +1191,15 @@
                             "value": "1"
                         },
                         {
-                            "name": "Speaker Function",
-                            "value": "1"
+                            "name": "ADD0 DATA SEL",
+                            "value": "2"
                         },
                         {
                             "name": "Mic Function",
                             "value": "1"
                         },
                         {
-                            "name": "S_NORMAL_AP01_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_NORMAL_AP01_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_NORMAL_AP23_P_CODEC SWITCH",
                             "value": "1"
                         },
                         {
@@ -1471,23 +1211,7 @@
                             "value": "1"
                         },
                         {
-                            "name": "S_FAST_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_OFFLOAD_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOICE_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_VOICE_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOIP_P_CODEC SWITCH",
                             "value": "1"
                         },
                         {
@@ -1495,27 +1219,7 @@
                             "value": "1"
                         },
                         {
-                            "name": "S_FM_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_LOOP_P_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
                             "name": "S_LOOP_C_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_FM_DSP_CODEC SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_VOICE_PCM_P SWITCH",
-                            "value": "1"
-                        },
-                        {
-                            "name": "S_FAST_P_SMART_AMP SWITCH",
                             "value": "1"
                         },
                         {
@@ -1531,48 +1235,20 @@
                             "value": "1"
                         },
                         {
+                            "name": "Inter PA Config",
+                            "value": "303"
+                        },
+                        {
                             "name": "ADC_1 Gain ADC_1 Capture Volume",
                             "value": "6"
                         },
                         {
                             "name": "ADC_2 Gain ADC_2 Capture Volume",
-                            "value": "7"
+                            "value": "6"
                         },
                         {
                             "name": "ADC_3 Gain ADC_3 Capture Volume",
                             "value": "6"
-                        },
-                        {
-                            "name": "AO Gain AO Playback Volume",
-                            "value": "4"
-                        },
-                        {
-                            "name": "AO Mixer AOL Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AO Mixer AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AOL EAR Sel",
-                            "value": "1"
-                        },
-                        {
-                            "name": "DA AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "HPL Gain HPL Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "HPR Gain HPR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "EAR Gain EAR Playback Volume",
-                            "value": "12"
                         }
                     ],
                     "Bluetooth": [
@@ -1775,6 +1451,10 @@
                             "value": "0 1024"
                         },
                         {
+                            "name": "VBC DAC0 DG Set",
+                            "value": "27 27"
+                        },
+                        {
                             "name": "VBC DAC1 DG Set",
                             "value": "24 24"
                         },
@@ -1799,12 +1479,20 @@
                             "value": "4"
                         },
                         {
+                            "name": "VBC_MUX_DAC1_IIS_PORT_SEL",
+                            "value": "0"
+                        },
+                        {
                             "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
                             "value": "2"
                         },
                         {
                             "name": "VBC_MUX_ADC3_IIS_PORT_SEL",
                             "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS3_PORT_DO_SEL",
+                            "value": "2"
                         },
                         {
                             "name": "agdsp_access_en",
@@ -1831,6 +1519,10 @@
                             "value": "168427525"
                         },
                         {
+                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "value": "1"
+                        },
+                        {
                             "name": "VBC_IIS_RX2_WD_SEL",
                             "value": "1"
                         },
@@ -1839,12 +1531,32 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC_IIS_TX0_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
+                            "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS0_PORT_DO_SEL",
+                            "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS2_PORT_DO_SEL",
+                            "value": "2"
+                        },
+                        {
                             "name": "ag_iis0_ext_sel_v2",
                             "value": "1"
                         },
                         {
                             "name": "ag_iis1_ext_sel_v2",
                             "value": "1"
+                        },
+                        {
+                            "name": "Inter PA Config",
+                            "value": "303"
                         },
                         {
                             "name": "DAC LRCLK Select",
@@ -1975,6 +1687,18 @@
                             "value": "6"
                         },
                         {
+                            "name": "DAC Gain DAC Playback Volume",
+                            "value": "3"
+                        },
+                        {
+                            "name": "HPL Gain HPL Playback Volume",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPR Gain HPR Playback Volume",
+                            "value": "0"
+                        },
+                        {
                             "name": "HPL Mixer DACLHPL Switch",
                             "value": "1"
                         },
@@ -2005,6 +1729,26 @@
                     ],
                     "Earpiece": [
                         {
+                            "name": "VBC DAC0 DSP MDG Set",
+                            "value": "0 1024"
+                        },
+                        {
+                            "name": "VBC DAC1 DSP MDG Set",
+                            "value": "0 1024"
+                        },
+                        {
+                            "name": "VBC DAC0 AUD MDG Set",
+                            "value": "0 1024"
+                        },
+                        {
+                            "name": "VBC DAC0 AUD23 MDG Set",
+                            "value": "0 1024"
+                        },
+                        {
+                            "name": "VBC DAC0 DG Set",
+                            "value": "27 27"
+                        },
+                        {
                             "name": "VBC DAC1 DG Set",
                             "value": "24 24"
                         },
@@ -2021,10 +1765,6 @@
                             "value": "24 24"
                         },
                         {
-                            "name": "VBC_MIXER1_DAC0",
-                            "value": "2"
-                        },
-                        {
                             "name": "VBC_MUX_ADC3",
                             "value": "5"
                         },
@@ -2033,12 +1773,20 @@
                             "value": "4"
                         },
                         {
+                            "name": "VBC_MUX_DAC1_IIS_PORT_SEL",
+                            "value": "0"
+                        },
+                        {
                             "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
                             "value": "2"
                         },
                         {
                             "name": "VBC_MUX_ADC3_IIS_PORT_SEL",
                             "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS3_PORT_DO_SEL",
+                            "value": "2"
                         },
                         {
                             "name": "agdsp_access_en",
@@ -2050,19 +1798,23 @@
                         },
                         {
                             "name": "VBC_VOLUME",
-                            "value": "7"
+                            "value": "3"
                         },
                         {
                             "name": "Audio Structure Profile Select",
-                            "value": "33685509"
+                            "value": "168427525"
                         },
                         {
                             "name": "DSP VBC Profile Select",
-                            "value": "33685509"
+                            "value": "168427525"
                         },
                         {
                             "name": "NXP Profile Select",
-                            "value": "33685509"
+                            "value": "168427525"
+                        },
+                        {
+                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "value": "1"
                         },
                         {
                             "name": "VBC_IIS_RX2_WD_SEL",
@@ -2073,11 +1825,35 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC_IIS_TX0_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
+                            "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS0_PORT_DO_SEL",
+                            "value": "0"
+                        },
+                        {
+                            "name": "VBC_MUX_IIS2_PORT_DO_SEL",
+                            "value": "2"
+                        },
+                        {
                             "name": "ag_iis0_ext_sel_v2",
                             "value": "1"
                         },
                         {
-                            "name": "ag_iis0_ext_sel_v2",
+                            "name": "ag_iis1_ext_sel_v2",
+                            "value": "1"
+                        },
+                        {
+                            "name": "Inter PA Config",
+                            "value": "303"
+                        },
+                        {
+                            "name": "DAC LRCLK Select",
                             "value": "1"
                         },
                         {
@@ -2097,7 +1873,11 @@
                             "value": "1"
                         },
                         {
-                            "name": "Earpiece Function",
+                            "name": "Speaker Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "Speaker1 Function",
                             "value": "1"
                         },
                         {
@@ -2177,6 +1957,10 @@
                             "value": "1"
                         },
                         {
+                            "name": "ADC_1 Mixer MIC1PGA_1 Switch",
+                            "value": "1"
+                        },
+                        {
                             "name": "AUD ADC0L Switch",
                             "value": "1"
                         },
@@ -2186,14 +1970,38 @@
                         },
                         {
                             "name": "ADC_1 Gain ADC_1 Capture Volume",
-                            "value": "1"
+                            "value": "6"
                         },
                         {
                             "name": "ADC_2 Gain ADC_2 Capture Volume",
-                            "value": "1"
+                            "value": "6"
                         },
                         {
                             "name": "ADC_3 Gain ADC_3 Capture Volume",
+                            "value": "6"
+                        },
+                        {
+                            "name": "DAC Gain DAC Playback Volume",
+                            "value": "3"
+                        },
+                        {
+                            "name": "HPL Gain HPL Playback Volume",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPR Gain HPR Playback Volume",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPL Mixer DACLHPL Switch",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HPR Mixer DACRHPR Switch",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HP Virt Switch",
                             "value": "1"
                         },
                         {
@@ -2201,7 +2009,7 @@
                             "value": "2"
                         },
                         {
-                            "name": "EAR_HPL Mixer DACHPL Switch",
+                            "name": "HPL EAR Sel",
                             "value": "1"
                         },
                         {
@@ -2421,19 +2229,35 @@
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "name": "DAC LRCLK Select",
                             "value": "1"
                         },
                         {
-                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "name": "HPL Mixer DACLHPL Switch",
                             "value": "1"
                         },
                         {
-                            "name": "DAC Gain DAC Playback Volume",
-                            "value": "2"
+                            "name": "HPR Mixer DACRHPR Switch",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HPL EAR Sel",
+                            "value": "1"
+                        },
+                        {
+                            "name": "HP Virt Switch",
+                            "value": "1"
                         },
                         {
                             "name": "Speaker Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "Speaker1 Function",
+                            "value": "1"
+                        },
+                        {
+                            "name": "ag_iis0_ext_sel_v2",
                             "value": "1"
                         },
                         {
@@ -2481,6 +2305,18 @@
                             "value": "1"
                         },
                         {
+                            "name": "VBC_IIS_TX0_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX1_WD_SEL",
+                            "value": "1"
+                        },
+                        {
+                            "name": "VBC_IIS_TX0_LRMOD_SEL",
+                            "value": "1"
+                        },
+                        {
                             "name": "VBC_MUX_DAC0_IIS_PORT_SEL",
                             "value": "0"
                         },
@@ -2501,67 +2337,31 @@
                             "value": "2"
                         },
                         {
-                            "name": "SmartAmp Boost",
-                            "value": "0"
+                            "name": "VBC DAC0 DG Set",
+                            "value": "27 27"
                         },
                         {
-                            "name": "DAC LRCLK Select",
-                            "value": "0"
+                            "name": "Inter PA Config",
+                            "value": "303"
                         },
                         {
-                            "name": "AO Gain AO Playback Volume",
-                            "value": "4"
-                        },
-                        {
-                            "name": "HPL Gain HPL Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "HPR Gain HPR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "EAR Gain EAR Playback Volume",
-                            "value": "12"
-                        },
-                        {
-                            "name": "AO Mixer AOL Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AO Mixer AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "AOL EAR Sel",
-                            "value": "1"
-                        },
-                        {
-                            "name": "DA AOR Switch",
-                            "value": "1"
-                        },
-                        {
-                            "name": "IVSENCE_FUNC_DSP",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis0_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "ag_iis1_ext_sel_v2",
-                            "value": "1"
-                        },
-                        {
-                            "name": "VBC ADC0 DG Set",
-                            "value": "127 127"
-                        },
-                        {
-                            "name": "aw87xxx_profile_switch_0",
-                            "value": "0"
+                            "name": "DSP VBC Profile Select",
+                            "value": "1232928768"
                         },
                         {
                             "name": "VBC_VOLUME",
+                            "value": "0"
+                        },
+                        {
+                            "name": "DAC Gain DAC Playback Volume",
+                            "value": "3"
+                        },
+                        {
+                            "name": "HPL Gain HPL Playback Volume",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPR Gain HPR Playback Volume",
                             "value": "0"
                         }
                     ],
