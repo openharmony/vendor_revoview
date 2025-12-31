@@ -115,6 +115,11 @@
             "name": "channelmanager_service",
             "uid": "root",
             "gid": "root"
+        },
+        {
+            "name": "codec_host",
+            "uid": "root",
+            "gid": "root"
         }
     ]
 }
