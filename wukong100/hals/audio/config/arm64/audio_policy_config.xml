@@ -38,6 +38,7 @@
             </pipes>
             <devices>
                 <device name="Speaker_Out" type="DEVICE_TYPE_SPEAKER" pin="PIN_OUT_SPEAKER" role="output" supportPipes="primary_output"/>
+                <device name="Earpiece_Out" type="DEVICE_TYPE_EARPIECE" pin="PIN_OUT_EARPIECE" role="output" supportPipes="primary_output"/>
                 <device name="Wired_Headset_Out" type="DEVICE_TYPE_WIRED_HEADSET" pin="PIN_OUT_HEADSET" role="output" supportPipes="primary_output"/>
                 <device name="Wired_Headphones_Out" type="DEVICE_TYPE_WIRED_HEADPHONES" pin="PIN_OUT_HEADPHONE" role="output" supportPipes="primary_output"/>
                 <device name="Builtin_Mic_In" type="DEVICE_TYPE_MIC" pin="PIN_IN_MIC" role="input" supportPipes="primary_input"/>
