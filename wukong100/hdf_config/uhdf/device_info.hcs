@@ -464,7 +464,8 @@
         codec :: host {
             hostName = "codec_host";
             priority = 50;
-            gid = ["codec_host", "uhdf_driver", "vendor_mpp_driver"];
+            uid = "root";
+            gid = ["root", "codec_host", "uhdf_driver", "vendor_mpp_driver"];
             codec_omx_device :: device {
                 device0 :: deviceNode {
                     policy = 2;
@@ -489,7 +490,7 @@
                     priority = 100;
                     moduleName = "libcodec_server.z.so";
                     serviceName = "codec_hdi_service";
-                    deviceMatchAttr = "codec_hdi1.0_capabilities";
+                    deviceMatchAttr = "media_codec_capabilities";
                 }
             }
             codec_image_device :: device {
