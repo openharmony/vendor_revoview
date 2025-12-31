@@ -13,3 +13,4 @@
 
 const.product.hardwareversion=default
 const.security.developermode.state=true
+const.build.datetime=wukong100_{{HARDWARE_VERSION}}
