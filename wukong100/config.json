@@ -11,6 +11,7 @@
   "enable_absystem": false,
   "build_selinux": true,
   "build_seccomp": false,
+  "device_stack_size": 8388608,
   "inherit": [ "productdefine/common/inherit/rich.json", "productdefine/common/inherit/chipset_common.json" ],
   "subsystems": [
     {
@@ -29,7 +30,12 @@
       "components": [
         {
           "component": "device_wukong100",
-          "features": []
+          "features": [
+            "device_wukong100_feature_preview_buffer_num = 8",
+            "device_wukong100_feature_photo_buffer_num = 3",
+            "device_wukong100_feature_return_timeout = 1500",
+            "device_wukong100_feature_buffer_partial_usage = true"
+          ]
         }
       ]
     },
@@ -108,6 +114,16 @@
             "drivers_peripheral_audio_feature_full_test_suite = true",
             "drivers_peripheral_audio_feature_alsa_lib = false",
             "drivers_peripheral_audio_feature_effect = true"
+          ]
+        },
+        {
+          "component": "drivers_peripheral_camera",
+          "features": [
+            "drivers_peripheral_camera_feature_board_config = true",
+            "drivers_peripheral_camera_feature_host_codec = true",
+            "drivers_peripheral_camera_feature_fork_dma = false",
+            "drivers_peripheral_camera_feature_batch_buffers = true",
+            "drivers_peripheral_camera_feature_Distribute_timeout = 500"
           ]
         },
         {
