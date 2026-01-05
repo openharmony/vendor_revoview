@@ -26,7 +26,6 @@ action("build_modules") {
   outputs += [ "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko" ]
 
   outputs += [ "$root_build_dir/modules/mali_kbase/mali_kbase.ko" ]
-  outputs += [ "$root_build_dir/modules/prox_with_ldo/prox_with_ldo.ko" ]
   ### spr_wcn
   outputs += [ "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko" ]
   ### sprd_gnss
@@ -302,15 +301,6 @@ ohos_prebuilt_executable("wow") {
   deps = [ ":build_modules" ]
   source = "$closed_module_source_dir/ws73/sle/firmware/e/wow.bin"
   module_install_dir = "etc/firmware"
-  install_images = [ chipset_base_dir ]
-  part_name = "product_wukong100"
-  install_enable = true
-}
-
-ohos_prebuilt_executable("prox_with_ldo") {
-  deps = [ ":build_modules" ]
-  source = "$root_build_dir/modules/prox_with_ldo/prox_with_ldo.ko"
-  module_install_dir = "modules"
   install_images = [ chipset_base_dir ]
   part_name = "product_wukong100"
   install_enable = true
@@ -598,7 +588,6 @@ group("modules") {
     ":btc_cali",
     ":wifi_cali",
     ":wow",
-    ":prox_with_ldo",
     ### audio
     ":agdsp_pd",
     ":audio_mem",
