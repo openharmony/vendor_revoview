@@ -117,12 +117,6 @@ ${MAKE} -C ${NPU_MODULES_SOURCE}/imgtec -f Makefile O=${BSP_KERNEL_OUT} \
     BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
     BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
 
-${MAKE} -C ${ROOT_DIR}/unisoc_p7885_property/modules/input/misc/prox_with_ldo  -f Makefile O=${BSP_KERNEL_OUT} \
-    ARCH=arm64  \
-    BSP_KERNEL_OUT=${BSP_KERNEL_OUT} \
-    BSP_KERNEL_PATH=${BSP_KERNEL_PATH} \
-    BSP_MODULES_OUT=${BSP_MODULES_OUT}  modules -j64
-
 #################### ws73 build start ######################################
 mkdir -p ${BSP_MODULES_OUT}/ws73
 cp -rf ${GPU_MODULES_SOURCE}/ws73/sle ${BSP_MODULES_OUT}/ws73/sle
