@@ -1,0 +1,56 @@
+{
+    "name": "@ohos/product_wukong100",
+    "description": "vendor bundle.",
+    "version": 3.2,
+    "license": "Apache License 2.0",
+    "publishAs": "code-segment",
+    "segment": {
+      "destPath": "vendor/revoview/wukong100"
+    },
+    "dirs": {},
+    "scripts": {},
+    "component": {
+      "name": "product_wukong100",
+      "subsystem": "product_wukong100",
+      "syscap": [],
+      "features": [],
+      "adapted_system_type": [ "standard"],
+      "hisysevent_config": [],
+      "rom": "",
+      "ram": "",
+      "deps": {
+        "components": [
+          "soc_p7885",
+          "closed_p7885",
+          "init",
+          "c_utils",
+          "hdf_core",
+          "samgr",
+          "ipc",
+          "hilog",
+          "bounds_checking_function"
+        ],
+        "third_party": [ "bounds_checking_function" ]
+      },
+      "build": {
+        "sub_component": [
+          "//vendor/revoview/wukong100/default_app_config:default_app_config",
+          "//vendor/revoview/wukong100/image_conf:custom_image_conf",
+          "//vendor/revoview/wukong100/preinstall-config:preinstall-config",
+          "//vendor/revoview/wukong100/resourceschedule:resourceschedule",
+	  "//vendor/revoview/wukong100/bootanimation:bootanimation_config",
+          "//vendor/revoview/wukong100/etc:product_etc_conf",
+          "//vendor/revoview/wukong100/hals/audio:hdf_audio_config",
+          "//vendor/revoview/wukong100/hals/codec/:hdf_codec_config",
+          "//vendor/revoview/wukong100/hdf_config/uhdf:hdf_config",
+          "//vendor/revoview/wukong100/window_config:window_config",
+          "//unisoc_p7885_property/modules/wcn/bluetooth/hal:libbt_vendor",
+          "//vendor/revoview/wukong100/modules:modules",
+          "//unisoc_p7885_property/modules/ws73/sle:ws73_sample"
+        ],
+        "inner_kits":[
+        ],
+        "test": []
+      }
+    }
+}

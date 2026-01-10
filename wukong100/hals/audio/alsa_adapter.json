@@ -1,0 +1,14 @@
+{
+    "adapters": [
+        {
+            "name": "primary",
+            "cardId": 0,
+            "cardName": "sprdphonesc2730"
+        },
+        {
+            "name": "hdmi",
+            "cardId": 1,
+            "cardName": "rockchiphdmi"
+        }
+    ]
+}

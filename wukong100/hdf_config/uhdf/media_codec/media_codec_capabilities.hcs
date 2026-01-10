@@ -1,0 +1,151 @@
+root {
+    module = "master";
+    codec_config {
+        match_attr = "media_codec_capabilities";
+        use_openmax = true;
+        // capsMask: 0x01, Adaptive playback; 0x02, Secure playback; 0x04, Tunnel playback.
+        // allocateMask: 0x01, Input buffer allocated within the Codec module;
+        // allocateMask: 0x02, Input buffer allocated by an external user;
+        // allocateMask: 0x04, Output buffer allocated within the Codec module;
+        // allocateMask: 0x08, Output buffer allocated by an external user.
+
+        VideoHwEncoders {
+            /* node name explaination -- OMX_video_hw_enc_avc_sprd
+            **
+            **    HDF____________video__________________hw____________________enc____________avc_______rk
+            **     |               |                    |                      |              |        |
+            ** HDF or OMX    video or audio    hardware or software    encoder or decoder    mime    vendor
+            */
+            OMX_video_hw_enc_avc_sprd {
+                role = 1;
+                type = 1;
+                name = "OMX.sprd.h264.encoder";
+                supportProfiles = [1, 32768, 2, 32768, 8, 32768];
+                maxInst = 6;
+                isSoftwareCodec = false;
+                processModeMask = [];
+                capsMask = [0x01];
+                minBitRate = 1;
+                maxBitRate = 10000000;
+                minWidth = 176;
+                minHeight = 144;
+                maxWidth = 4096;
+                maxHeight = 2160;
+                widthAlignment = 8;
+                heightAlignment = 8;
+                minBlockCount = 99;
+                maxBlockCount = 34560;
+                minBlocksPerSecond = 1;
+                maxBlocksPerSecond = 244800;
+                blockSizeWidth = 16;
+                blockSizeHeight = 16;
+                supportPixelFmts = [12, 24, 25];
+                measuredFrameRate = [320, 240, 617, 617, 720, 480, 559, 559, 1280, 720, 276, 276, 1920, 1080, 164, 164, 3840, 2160, 30, 30];
+                bitRateMode = [1];
+                minFrameRate = 1;
+                maxFrameRate = 60;
+            }
+            OMX_video_hw_enc_hevc_sprd {
+                role = 2;
+                type = 1;
+                name = "OMX.sprd.h265.encoder";
+                supportProfiles = [1, 32768, 2, 32768, 8, 32768];
+                maxInst = 6;
+                isSoftwareCodec = false;
+                processModeMask = [];
+                capsMask = [0x01];
+                minBitRate = 1;
+                maxBitRate = 10000000;
+                minWidth = 176;
+                minHeight = 144;
+                maxWidth = 4096;
+                maxHeight = 2160;
+                widthAlignment = 8;
+                heightAlignment = 8;
+                minBlockCount = 99;
+                maxBlockCount = 34560;
+                minBlocksPerSecond = 1;
+                maxBlocksPerSecond = 244800;
+                blockSizeWidth = 16;
+                blockSizeHeight = 16;
+                supportPixelFmts = [12, 24, 25];
+                measuredFrameRate = [320, 240, 617, 617, 720, 480, 559, 559, 1280, 720, 276, 276, 1920, 1080, 164, 164, 3840, 2160, 30, 30];
+                bitRateMode = [1];
+                minFrameRate = 1;
+                maxFrameRate = 60;
+            }
+        }
+        VideoHwDecoders {
+            OMX_video_hw_dec_avc_sprd {
+                role = 1;
+                type = 0;
+                name = "OMX.sprd.h264.decoder";
+                supportProfiles = [1, 32768, 2, 32768, 8, 32768];
+                maxInst = 6;
+                isSoftwareCodec = false;
+                processModeMask = [];
+                capsMask = [0x01];
+                minBitRate = 1;
+                maxBitRate = 10000000;
+                minWidth = 176;
+                minHeight = 144;
+                maxWidth = 4096;
+                maxHeight = 2160;
+                widthAlignment = 8;
+                heightAlignment = 8;
+                minBlockCount = 99;
+                maxBlockCount = 34560;
+                minBlocksPerSecond = 1;
+                maxBlocksPerSecond = 244800;
+                blockSizeWidth = 16;
+                blockSizeHeight = 16;
+                supportPixelFmts = [24];
+                measuredFrameRate = [320, 240, 617, 617, 720, 480, 559, 559, 1280, 720, 276, 276, 1920, 1080, 164, 164, 3840, 2160, 30, 30];
+                bitRateMode = [];
+                minFrameRate = 1;
+                maxFrameRate = 60;
+            }
+            OMX_video_hw_dec_hevc_sprd {
+                role = 2;
+                type = 0;
+                name = "OMX.sprd.hevc.decoder";
+                supportProfiles = [1, 32768, 2, 32768, 8, 32768];
+                maxInst = 6;
+                isSoftwareCodec = false;
+                processModeMask = [];
+                capsMask = [0x01];
+                minBitRate = 1;
+                maxBitRate = 10000000;
+                minWidth = 176;
+                minHeight = 144;
+                maxWidth = 4096;
+                maxHeight = 2160;
+                widthAlignment = 8;
+                heightAlignment = 8;
+                minBlockCount = 99;
+                maxBlockCount = 34560;
+                minBlocksPerSecond = 1;
+                maxBlocksPerSecond = 244800;
+                blockSizeWidth = 16;
+                blockSizeHeight = 16;
+                supportPixelFmts = [24];
+                measuredFrameRate = [320, 240, 617, 617, 720, 480, 559, 559, 1280, 720, 276, 276, 1920, 1080, 164, 164, 3840, 2160, 30, 30];
+                bitRateMode = [];
+                minFrameRate = 1;
+                maxFrameRate = 60;
+            }
+        }
+        VideoSwEncoders {
+        }
+        VideoSwDecoders {
+        }
+        AudioHwEncoders {
+        }
+        AudioHwDecoders {
+        }
+        AudioSwEncoders {
+        }
+        AudioSwDecoders {
+        }
+    }
+}

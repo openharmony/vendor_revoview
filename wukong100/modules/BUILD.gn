@@ -1,0 +1,621 @@
+# Copyright (c) 2023 HiHope Open Source Organization .
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import("//build/config/clang/clang.gni")
+import("//build/ohos.gni")
+module_source_dir = "//vendor/$product_company/$product_name/modules"
+closed_module_source_dir = "//unisoc_p7885_property/modules"
+common_source_dir = "//device/soc/unisoc/p7885/"
+
+action("build_modules") {
+  script = "build_modules.sh"
+  sources = [ module_source_dir ]
+  sources += [ "//kernel_unisoc_p7885" ]
+  outputs = [ "$root_build_dir/modules" ]
+  outputs += [ "$root_build_dir/modules/sprdbt_tty/sprdbt_tty.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko" ]
+
+  outputs += [ "$root_build_dir/modules/mali_kbase/mali_kbase.ko" ]
+  ### spr_wcn
+  outputs += [ "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko" ]
+  ### sprd_gnss
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_common_ctl_all/unisoc_gnss_common_ctl_all.ko" ]
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_dbg/unisoc_gnss_dbg.ko" ]
+  outputs += [ "$root_build_dir/modules/unisoc_gnss_pmnotify_ctl/unisoc_gnss_pmnotify_ctl.ko" ]
+
+  outputs += [ "$root_build_dir/modules/gslx680/gslx680.ko" ]
+  outputs += [ "$root_build_dir/modules/vpu/vpu.ko" ]
+  outputs += [ "$root_build_dir/modules/npu_img_vha/npu_img_vha.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd_vdsp/sprd_vdsp.ko" ]
+  outputs += [ "$root_build_dir/modules/ws73/sle/output/bin/plat_soc.ko" ]
+  outputs += [ "$root_build_dir/modules/ws73/sle/output/bin/sle_soc.ko" ]
+  outputs += [ "$root_build_dir/modules/ws73/sle/output/bin/ws73_cfg.ini" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/agdsp_pd.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/audio_mem.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/audio_sipc.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/audio-dsp-dump.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd_audio_usb_offload.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd_apipe.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/audio-pipe.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/mcdt_hw_r2p0.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd_audcp_dvfs.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd_audcp_boot.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/voice_trigger_irq.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-card.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620-power.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620-power-dev.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-unisoc-dp-codec.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-dummy-codec.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-pa-ucp1301.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/smp_aw87xxx.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-pdm-r2p0.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-tdm.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd-platform-pcm-routing.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-vbc-v4.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-vbc-fe.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/snd-soc-sprd-dai.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd-dmaengine-pcm.ko" ]
+  outputs += [ "$root_build_dir/modules/sprd-audio/sprd-compr-2stage-dma.ko" ]
+  deps = [ "//device/board/$product_company/$product_name/kernel:kernel" ]
+  args = [
+    rebase_path(module_source_dir, root_build_dir),
+    rebase_path(root_build_dir),
+    rebase_path(module_source_dir),
+    rebase_path(common_source_dir),
+    rebase_path(closed_module_source_dir),
+  ]
+}
+
+ohos_prebuilt_executable("sprdbt_tty") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprdbt_tty/sprdbt_tty.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_etc("wcnmodem") {
+  source = "$closed_module_source_dir/wcn/wcnmodem.bin"
+  module_install_dir = "firmware"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("gnssmodem") {
+  source = "$closed_module_source_dir/wcn/gnssmodem.bin"
+  module_install_dir = "firmware"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("wifi_board_config") {
+  source = "$closed_module_source_dir/wcn/wifi_board_config.ini"
+  module_install_dir = "firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_pskey_aa") {
+  source = "$closed_module_source_dir/wcn/bt_configure_pskey_aa.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_rf_aa") {
+  source = "$closed_module_source_dir/wcn/bt_configure_rf_aa.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_pskey") {
+  source = "$closed_module_source_dir/wcn/bt_configure_pskey.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("bt_configure_rf") {
+  source = "$closed_module_source_dir/wcn/bt_configure_rf.ini"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("regulatory.db") {
+  source = "$closed_module_source_dir/wcn/regulatory.db"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_etc("regulatory.db.p7s") {
+  source = "$closed_module_source_dir/wcn/regulatory.db.p7s"
+  part_name = "product_wukong100"
+  install_images = [ chipset_base_dir ]
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_wlan_combo") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd_wlan_combo/sprd_wlan_combo.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("mali_kbase") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/mali_kbase/mali_kbase.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+###### sprd_gnss
+ohos_prebuilt_executable("unisoc_gnss_common_ctl_all") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_common_ctl_all/unisoc_gnss_common_ctl_all.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("unisoc_gnss_dbg") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_dbg/unisoc_gnss_dbg.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("unisoc_gnss_pmnotify_ctl") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/unisoc_gnss_pmnotify_ctl/unisoc_gnss_pmnotify_ctl.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("unisoc_wcn_bsp") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprdwcn/unisoc_wcn_bsp.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("gslx680") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/gslx680/gslx680.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("vpu") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/vpu/vpu.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("npu_img_vha") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/npu_img_vha/npu_img_vha.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_vdsp") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd_vdsp/sprd_vdsp.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("plat_soc") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/ws73/sle/output/bin/plat_soc.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sle_soc") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/ws73/sle/output/bin/sle_soc.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("ws73_cfg") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/ws73/sle/output/bin/ws73_cfg.ini"
+  module_install_dir = "etc/firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("ws73") {
+  deps = [ ":build_modules" ]
+  source = "$closed_module_source_dir/ws73/sle/firmware/e/ws73.bin"
+  module_install_dir = "etc/firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("btc_cali") {
+  deps = [ ":build_modules" ]
+  source = "$closed_module_source_dir/ws73/sle/firmware/e/btc_cali.bin"
+  module_install_dir = "etc/firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("wifi_cali") {
+  deps = [ ":build_modules" ]
+  source = "$closed_module_source_dir/ws73/sle/firmware/e/wifi_cali.bin"
+  module_install_dir = "etc/firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("wow") {
+  deps = [ ":build_modules" ]
+  source = "$closed_module_source_dir/ws73/sle/firmware/e/wow.bin"
+  module_install_dir = "etc/firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("agdsp_pd") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/agdsp_pd.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("audio_mem") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/audio_mem.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("audio_sipc") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/audio_sipc.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("audio-dsp-dump") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/audio-dsp-dump.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_audio_usb_offload") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd_audio_usb_offload.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_apipe") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd_apipe.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("audio-pipe") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/audio-pipe.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("mcdt_hw_r2p0") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/mcdt_hw_r2p0.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_audcp_dvfs") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd_audcp_dvfs.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd_audcp_boot") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd_audcp_boot.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("voice_trigger_irq") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/voice_trigger_irq.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-card") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-card.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-codec-ump9620-power") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620-power.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-codec-ump9620-power-dev") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620-power-dev.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-codec-ump9620") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-codec-ump9620.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-unisoc-dp-codec") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-unisoc-dp-codec.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-dummy-codec") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-dummy-codec.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-pa-ucp1301") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-pa-ucp1301.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("smp_aw87xxx") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/smp_aw87xxx.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-pdm-r2p0") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-pdm-r2p0.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-tdm") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-tdm.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd-platform-pcm-routing") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd-platform-pcm-routing.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-vbc-v4") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-vbc-v4.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-vbc-fe") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-vbc-fe.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("snd-soc-sprd-dai") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/snd-soc-sprd-dai.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd-dmaengine-pcm") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd-dmaengine-pcm.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("sprd-compr-2stage-dma") {
+  deps = [ ":build_modules" ]
+  source = "$root_build_dir/modules/sprd-audio/sprd-compr-2stage-dma.ko"
+  module_install_dir = "modules"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+ohos_prebuilt_executable("aw87xxx_acf") {
+  source = "$closed_module_source_dir/audio/aw87xxx_acf.bin"
+  module_install_dir = "firmware"
+  install_images = [ chipset_base_dir ]
+  part_name = "product_wukong100"
+  install_enable = true
+}
+
+group("modules") {
+  deps = [
+    ### sprdwcn
+    ":unisoc_wcn_bsp",
+    ###
+    ":unisoc_gnss_common_ctl_all",
+    ":unisoc_gnss_dbg",
+    ":unisoc_gnss_pmnotify_ctl",
+    ":sprd_wlan_combo",
+    ":sprdbt_tty",
+    ":wcnmodem",
+    ":gnssmodem",
+    ":wifi_board_config",
+    ":bt_configure_pskey",
+    ":bt_configure_rf",
+    ":bt_configure_pskey_aa",
+    ":bt_configure_rf_aa",
+    ":regulatory.db",
+    ":regulatory.db.p7s",
+    ":mali_kbase",
+    ":gslx680",
+    ":vpu",
+    ":npu_img_vha",
+    ":sprd_vdsp",
+    ":plat_soc",
+    ":sle_soc",
+    ":ws73_cfg",
+    ":ws73",
+    ":btc_cali",
+    ":wifi_cali",
+    ":wow",
+    ### audio
+    ":agdsp_pd",
+    ":audio_mem",
+    ":audio_sipc",
+    ":audio-dsp-dump",
+    ":sprd_audio_usb_offload",
+    ":sprd_apipe",
+    ":audio-pipe",
+    ":mcdt_hw_r2p0",
+    ":sprd_audcp_dvfs",
+    ":sprd_audcp_boot",
+    ":voice_trigger_irq",
+    ":snd-soc-sprd-card",
+    ":snd-soc-sprd-codec-ump9620-power",
+    ":snd-soc-sprd-codec-ump9620-power-dev",
+    ":snd-soc-sprd-codec-ump9620",
+    ":snd-soc-unisoc-dp-codec",
+    ":snd-soc-sprd-dummy-codec",
+    ":snd-soc-sprd-pa-ucp1301",
+    ":smp_aw87xxx",
+    ":snd-soc-sprd-pdm-r2p0",
+    ":snd-soc-sprd-tdm",
+    ":sprd-platform-pcm-routing",
+    ":snd-soc-sprd-vbc-v4",
+    ":snd-soc-sprd-vbc-fe",
+    ":snd-soc-sprd-dai",
+    ":sprd-dmaengine-pcm",
+    ":sprd-compr-2stage-dma",
+    ":aw87xxx_acf",
+  ]
+}
