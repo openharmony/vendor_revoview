@@ -69,7 +69,7 @@
 
             </filefilter>
             <filefilter name="binaryFileTypePolicyFilter" desc="Filters for binary file policies">
-                <filteritem type="filepath" name="app/*" desc="hap file,can not add license head"/>
+                <filteritem type="filepath" name="wukong100/app/*.hap" desc="hap file,can not add license head"/>
             </filefilter>
 
         </filefilterlist>
