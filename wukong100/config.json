@@ -45,6 +45,14 @@
         {
           "component": "soc_p7885",
           "features": []
+        },
+        {
+          "component": "libnfc_nci",
+          "features": []
+        },
+        {
+          "component": "nfc_hdiimpl",
+          "features": []
         }
       ]
     },
@@ -155,6 +163,14 @@
             "hdf_core_platform_test_support = false",
             "hdf_core_default_peripheral_config = false"
           ]
+        },
+        {
+          "component": "drivers_peripheral_nfc",
+          "features":[]
+        },
+        {
+          "component": "drivers_interface_nfc",
+          "features":[]
         }
       ]
     },
@@ -219,6 +235,10 @@
             "wifi_feature_non_hdf_driver = true",
             "wifi_feature_p2p_random_mac_addr = true"
          ]
+        },
+        {
+          "component": "nfc",
+          "features": []
         }
       ]
     },
