@@ -46,7 +46,8 @@
           "//vendor/revoview/wukong100/window_config:window_config",
           "//unisoc_p7885_property/modules/wcn/bluetooth/hal:libbt_vendor",
           "//vendor/revoview/wukong100/modules:modules",
-          "//unisoc_p7885_property/modules/ws73/sle:ws73_sample"
+          "//unisoc_p7885_property/modules/ws73/sle:ws73_sample",
+          "//vendor/revoview/wukong100/app:test_app"
         ],
         "inner_kits":[
         ],
