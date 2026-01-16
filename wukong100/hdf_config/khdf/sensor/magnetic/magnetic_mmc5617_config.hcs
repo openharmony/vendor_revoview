@@ -52,10 +52,6 @@ root {
             */
             /* regAddr, value, mask, len, delay, opsType, calType, shiftNum, debug, save */
             initSeqConfig = [
-                0x1c,    0x01, 0xff,   1,     5,       2,       0,        0,     0,    0,
-                0x1a,    0x78, 0xff,   1,     5,       2,       0,        0,     0,    0,
-                0x1b,    0xa0, 0xff,   1,     5,       2,       0,        0,     0,    0,
-                0x1d,    0x00, 0xff,   1,     5,       2,       0,        0,     0,    0
             ];
             enableSeqConfig = [
                 0x1d,    0x10, 0xff,   1,     5,       2,       0,        0,     0,    0
