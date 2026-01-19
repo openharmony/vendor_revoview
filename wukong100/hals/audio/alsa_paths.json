@@ -1433,7 +1433,7 @@
             ],
             "voice-call": [
                 {
-                    "Earpiece": [
+                    "Speaker": [
                         {
                             "name": "VBC DAC0 DSP MDG Set",
                             "value": "0 1024"
@@ -1451,12 +1451,8 @@
                             "value": "0 1024"
                         },
                         {
-                            "name": "VBC DAC0 DG Set",
-                            "value": "27 27"
-                        },
-                        {
                             "name": "VBC DAC1 DG Set",
-                            "value": "24 24"
+                            "value": "32 32"
                         },
                         {
                             "name": "VBC ADC2 DG Set",
@@ -1469,6 +1465,14 @@
                         {
                             "name": "VBC ST DG Set",
                             "value": "24 24"
+                        },
+                        {
+                            "name": "VBC_MIXER1_DAC0",
+                            "value": "0"
+                        },
+                        {
+                            "name": "VBC_VOLUME",
+                            "value": "3"
                         },
                         {
                             "name": "VBC_MUX_ADC3",
@@ -1575,8 +1579,12 @@
                             "value": "1"
                         },
                         {
+                            "name": "Earpiece Function",
+                            "value": "0"
+                        },
+                        {
                             "name": "Speaker Function",
-                            "value": "1"
+                            "value": "0"
                         },
                         {
                             "name": "Speaker1 Function",
@@ -1684,7 +1692,7 @@
                         },
                         {
                             "name": "DAC Gain DAC Playback Volume",
-                            "value": "3"
+                            "value": "6"
                         },
                         {
                             "name": "HPL Gain HPL Playback Volume",
@@ -1713,9 +1721,13 @@
                         {
                             "name": "HPL EAR Sel",
                             "value": "1"
+                        },
+                        {
+                            "name": "EAR_HPL Mixer DACHPL Switch",
+                            "value": "0"
                         }
                     ],
-                    "Speaker": [
+                    "Earpiece": [
                         {
                             "name": "VBC DAC0 DSP MDG Set",
                             "value": "0 0"
@@ -1750,23 +1762,23 @@
                         },
                         {
                             "name": "VBC_MIXER1_DAC0",
-                            "value": "HALF_ADD"
+                            "value": "2"
                         },
                         {
                             "name": "VBC_MUX_ADC3",
-                            "value": "ADC_IN_DAC1"
+                            "value": "5"
                         },
                         {
                             "name": "VBC_MUX_ST",
-                            "value": "ST_IN_ADC2"
+                            "value": "4"
                         },
                         {
                             "name": "VBC_MUX_ADC1_IIS_PORT_SEL",
-                            "value": "VBC_IIS_PORT_IIS2"
+                            "value": "2"
                         },
                         {
                             "name": "VBC_MUX_ADC3_IIS_PORT_SEL",
-                            "value": "VBC_IIS_PORT_IIS0"
+                            "value": "0"
                         },
                         {
                             "name": "agdsp_access_en",
@@ -1805,6 +1817,10 @@
                             "value": "1"
                         },
                         {
+                            "name": "DAC LRCLK Select",
+                            "value": "0"
+                        },
+                        {
                             "name": "ADC LRCLK Select",
                             "value": "1"
                         },
@@ -1830,7 +1846,7 @@
                         },
                         {
                             "name": "Speaker1 Function",
-                            "value": "1"
+                            "value": "0"
                         },
                         {
                             "name": "Mic Function",
@@ -1931,6 +1947,18 @@
                         {
                             "name": "ADC_3 Gain ADC_3 Capture Volume",
                             "value": "7"
+                        },
+                        {
+                            "name": "HPL Mixer DACLHPL Switch",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HPR Mixer DACRHPR Switch",
+                            "value": "0"
+                        },
+                        {
+                            "name": "HP Virt Switch",
+                            "value": "0"
                         },
                         {
                             "name": "EAR Gain EAR Playback Volume",

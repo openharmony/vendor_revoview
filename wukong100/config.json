@@ -20,7 +20,8 @@
         {
           "component": "selinux_adapter",
           "features": [
-            "selinux_adapter_enforce = false"
+            "selinux_adapter_enforce = false",
+            "selinux_adapter_build_path = device/soc/unisoc/p7885/sepolicy/ohos_6.1:device/soc/unisoc/p7885/sepolicy/base:device/soc/unisoc/p7885/sepolicy/ext_policy"
           ]
         }
       ]
@@ -44,6 +45,14 @@
       "components": [
         {
           "component": "soc_p7885",
+          "features": []
+        },
+        {
+          "component": "libnfc_nci",
+          "features": []
+        },
+        {
+          "component": "nfc_hdiimpl",
           "features": []
         }
       ]
@@ -155,6 +164,14 @@
             "hdf_core_platform_test_support = false",
             "hdf_core_default_peripheral_config = false"
           ]
+        },
+        {
+          "component": "drivers_peripheral_nfc",
+          "features":[]
+        },
+        {
+          "component": "drivers_interface_nfc",
+          "features":[]
         }
       ]
     },
@@ -219,6 +236,10 @@
             "wifi_feature_non_hdf_driver = true",
             "wifi_feature_p2p_random_mac_addr = true"
          ]
+        },
+        {
+          "component": "nfc",
+          "features": []
         }
       ]
     },

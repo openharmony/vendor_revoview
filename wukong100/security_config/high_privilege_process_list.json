@@ -120,6 +120,11 @@
             "name": "codec_host",
             "uid": "root",
             "gid": "root"
+        },
+        {
+            "name": "nfc_host",
+            "uid": "root",
+            "gid": "nfc_host"
         }
     ]
 }
