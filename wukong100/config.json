@@ -239,7 +239,11 @@
         },
         {
           "component": "nfc",
-          "features": []
+          "features": [
+            "nfc_service_feature_vendor_applications_enabled = true",
+            "nfc_sim_feature = false",
+            "nfc_use_vendor_nci_native = false"
+          ]
         }
       ]
     },
