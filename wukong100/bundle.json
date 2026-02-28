@@ -44,7 +44,7 @@
           "//vendor/revoview/wukong100/hals/codec/:hdf_codec_config",
           "//vendor/revoview/wukong100/hdf_config/uhdf:hdf_config",
           "//vendor/revoview/wukong100/window_config:window_config",
-          "//unisoc_p7885_property/modules/wcn/bluetooth/hal:libbt_vendor",
+          "//device/soc/unisoc/p7885/hardware/bluetooth:libbt_vendor",
           "//unisoc_p7885_property/modules/ws73/sle:ws73_sample",
           "//vendor/revoview/wukong100/app:test_app"
         ],
