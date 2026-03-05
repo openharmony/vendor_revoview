@@ -22,6 +22,6 @@ ohos_prebuilt_etc("nfc_hap") {
 
 group("test_app") {
   deps = [
-    ":nfc_hap",
+
   ]
 }
