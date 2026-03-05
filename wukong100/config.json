@@ -49,15 +49,6 @@
       ]
     },
     {
-      "subsystem": "closed_p7885",
-      "components": [
-        {
-          "component": "closed_p7885",
-          "features": []
-        }
-      ]
-    },
-    {
       "subsystem": "arkui",
       "components": [
         {
