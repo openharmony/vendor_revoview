@@ -21,7 +21,6 @@
       "deps": {
         "components": [
           "soc_p7885",
-          "closed_p7885",
           "init",
           "c_utils",
           "hdf_core",
