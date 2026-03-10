@@ -61,7 +61,7 @@
                 device0 :: deviceNode {
                     policy = 2;
                     priority = 100;
-                    preload = 2;
+                    preload = 1;
                     moduleName = "libaudio_bluetooth_hdi_adapter_server.z.so";
                     serviceName = "audio_bluetooth_hdi_service";
                 }
@@ -680,21 +680,6 @@
                     preload = 0;
                     moduleName = "libnnrt_driver.z.so";
                     serviceName = "nnrt_device_service";
-                }
-            }
-        }
-        nfc_host :: host {
-            hostName = "nfc_host";
-            priority = 50;
-            uid = "root";
-            gid = ["nfc_host"];
-            nfc_device :: device {
-                device0 :: deviceNode {
-                    policy = 2;
-                    priority = 100;
-                    preload = 0;
-                    moduleName = "libnfc_hdi_driver.z.so";
-                    serviceName = "nfc_interface_service";
                 }
             }
         }

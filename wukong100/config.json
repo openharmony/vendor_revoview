@@ -20,8 +20,7 @@
         {
           "component": "selinux_adapter",
           "features": [
-            "selinux_adapter_enforce = false",
-            "selinux_adapter_build_path = device/soc/unisoc/p7885/sepolicy/ohos_6.1:device/soc/unisoc/p7885/sepolicy/base:device/soc/unisoc/p7885/sepolicy/ext_policy"
+            "selinux_adapter_enforce = false"
           ]
         }
       ]
@@ -45,23 +44,6 @@
       "components": [
         {
           "component": "soc_p7885",
-          "features": []
-        },
-        {
-          "component": "libnfc_nci",
-          "features": []
-        },
-        {
-          "component": "nfc_hdiimpl",
-          "features": []
-        }
-      ]
-    },
-    {
-      "subsystem": "closed_p7885",
-      "components": [
-        {
-          "component": "closed_p7885",
           "features": []
         }
       ]
@@ -164,14 +146,6 @@
             "hdf_core_platform_test_support = false",
             "hdf_core_default_peripheral_config = false"
           ]
-        },
-        {
-          "component": "drivers_peripheral_nfc",
-          "features":[]
-        },
-        {
-          "component": "drivers_interface_nfc",
-          "features":[]
         }
       ]
     },
@@ -236,10 +210,6 @@
             "wifi_feature_non_hdf_driver = true",
             "wifi_feature_p2p_random_mac_addr = true"
          ]
-        },
-        {
-          "component": "nfc",
-          "features": []
         }
       ]
     },
@@ -252,7 +222,8 @@
             "audio_framework_feature_dtmf_tone = true",
             "audio_framework_feature_opensl_es = true",
             "audio_framework_feature_support_os_account = false",
-            "audio_framework_feature_audiosuite_support = true"
+            "audio_framework_feature_audiosuite_support = true",
+            "audio_framework_feature_source_period_size = 5"
           ]
         },
         {
@@ -388,7 +359,7 @@
             "graphic_2d_feature_use_igraphics_extend_hooks = false",
             "graphic_2d_feature_enable_opengl = true",
             "graphic_2d_feature_ace_enable_gpu = true",
-            "graphic_2d_feature_rs_enable_uni_render = false",
+            "graphic_2d_feature_rs_enable_uni_render = true",
             "graphic_2d_feature_use_texgine = true",
             "graphic_2d_feature_upgrade_skia = true"
           ]

@@ -21,7 +21,6 @@
       "deps": {
         "components": [
           "soc_p7885",
-          "closed_p7885",
           "init",
           "c_utils",
           "hdf_core",
@@ -38,15 +37,12 @@
           "//vendor/revoview/wukong100/image_conf:custom_image_conf",
           "//vendor/revoview/wukong100/preinstall-config:preinstall-config",
           "//vendor/revoview/wukong100/resourceschedule:resourceschedule",
-	  "//vendor/revoview/wukong100/bootanimation:bootanimation_config",
+          "//vendor/revoview/wukong100/bootanimation:bootanimation_config",
           "//vendor/revoview/wukong100/etc:product_etc_conf",
           "//vendor/revoview/wukong100/hals/audio:hdf_audio_config",
           "//vendor/revoview/wukong100/hals/codec/:hdf_codec_config",
           "//vendor/revoview/wukong100/hdf_config/uhdf:hdf_config",
           "//vendor/revoview/wukong100/window_config:window_config",
-          "//unisoc_p7885_property/modules/wcn/bluetooth/hal:libbt_vendor",
-          "//vendor/revoview/wukong100/modules:modules",
-          "//unisoc_p7885_property/modules/ws73/sle:ws73_sample",
           "//vendor/revoview/wukong100/app:test_app"
         ],
         "inner_kits":[
