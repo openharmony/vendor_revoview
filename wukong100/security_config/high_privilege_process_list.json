@@ -117,6 +117,36 @@
             "gid": "root"
         },
         {
+            "name": "cali_engpc_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "cali_modem_control_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "cali_cp_diskserver_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "engpc_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "mlogservice_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
+            "name": "slogmodem_service",
+            "uid": "root",
+            "gid": "root"
+        },
+        {
             "name": "codec_host",
             "uid": "root",
             "gid": "root"
