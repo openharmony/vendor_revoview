@@ -13,6 +13,7 @@
 
 import("//build/ohos.gni")
 
+if (is_asan) {
 ohos_copy("system_image_conf_for_asan") {
   sources = [ "system_image_conf.txt" ]
   outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
@@ -27,6 +28,12 @@ ohos_copy("updater_ramdisk_image_conf_for_asan") {
   sources = [ "updater_ramdisk_image_conf.txt" ]
   outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
 }
+} else {
+ohos_copy("system_image_conf") {
+  sources = [ "system_image_conf.txt" ]
+  outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
+}
+}
 
 group("custom_image_conf") {
   if (is_asan) {
@@ -35,5 +42,9 @@ group("custom_image_conf") {
       ":system_image_conf_for_asan",
       ":updater_ramdisk_image_conf_for_asan",
     ]
+  } else {
+    deps = [
+      ":system_image_conf",
+    ] 
   }
 }
