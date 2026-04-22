@@ -147,6 +147,10 @@
             "hdf_core_platform_test_support = false",
             "hdf_core_default_peripheral_config = false"
           ]
+        },
+        {
+            "component": "drivers_tools",
+            "features": []
         }
       ]
     },
