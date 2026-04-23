@@ -147,6 +147,14 @@
             "hdf_core_platform_test_support = false",
             "hdf_core_default_peripheral_config = false"
           ]
+        },
+        {
+            "component": "drivers_tools",
+            "features": []
+        },
+        {
+          "component": "drivers_adapter",
+          "features": []
         }
       ]
     },
@@ -360,7 +368,7 @@
             "graphic_2d_feature_use_igraphics_extend_hooks = false",
             "graphic_2d_feature_enable_opengl = true",
             "graphic_2d_feature_ace_enable_gpu = true",
-            "graphic_2d_feature_rs_enable_uni_render = true",
+            "graphic_2d_feature_rs_enable_uni_render = false",
             "graphic_2d_feature_use_texgine = true",
             "graphic_2d_feature_upgrade_skia = true"
           ]
