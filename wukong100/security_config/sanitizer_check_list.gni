@@ -683,6 +683,7 @@ bypass_eventhandler = [ "libeventhandler" ]
 # os_account : //base/account/os_account
 bypass_os_account = [
   "account_iam_napi",  # napi target, not required to enable cfi
+  "authorization_napi",  # napi target, not required to enable cfi
   "appaccount",  # napi target, not required to enable cfi
   "account_napi_common",  # napi target, not required to enable cfi
   "distributedaccount",  # napi target, not required to enable cfi
@@ -1518,6 +1519,7 @@ bypass_graphic_2d = [
   "rs_graphic_test",
   "rs_graphic_test_main",
   "font_asset",
+  "layer_backend_test_impl",  # test target with gmock, not required to enable cfi
 ]
 
 # security_component_manager : //base/security/security_component_manager
@@ -1548,7 +1550,6 @@ bypass_device_manager = [
 bypass_hdf_core = [
   "libhdf_ipc_adapter",
   "libhdf_host",
-  "hdf_devhost",
   "libhdi",
   "libhdi_base",
   "libpub_utils",
@@ -1561,6 +1562,11 @@ bypass_hdf_core = [
   "libvdi_sample1_driver",
   "libvdi_sample1_symbol",
   "libvdi_sample2_driver",
+]
+
+# drivers_adapter : //drivers/peripheral/adapter
+bypass_drivers_adapter = [
+  "hdf_devhost",
 ]
 
 # The list contains both part name that need to enable cfi and disable debug mode, and corresponding bypass_xxx list that bypass the cfi check
@@ -2031,6 +2037,10 @@ enable_cfi_part_and_bypass_list = [
   [
     "hdf_core",
     bypass_hdf_core,
+  ],
+    [
+    "drivers_adapter",
+    bypass_drivers_adapter,
   ],
 ]
 
