@@ -320,6 +320,10 @@
           "features": []
         },
         {
+            "component": "expat",
+            "features": []
+        },
+        {
           "component": "skia",
           "features": [
             "skia_feature_upgrade = true"
