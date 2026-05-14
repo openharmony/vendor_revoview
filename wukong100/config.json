@@ -329,6 +329,10 @@
           ]
         },
         {
+          "component": "vma",
+          "features": []
+        },
+        {
           "component": "optimized_routines",
           "features": []
         },
