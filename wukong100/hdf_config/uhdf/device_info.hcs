@@ -413,7 +413,7 @@
         riladapter :: host {
             hostName = "riladapter_host";
             priority = 50;
-            caps = ["DAC_OVERRIDE", "DAC_READ_SEARCH"];
+            gid = ["riladapter_host", "uhdf_driver", "root"];
             riladapter_device :: device {
                 device0 :: deviceNode {
                     policy = 2;
