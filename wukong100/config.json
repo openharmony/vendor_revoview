@@ -21,7 +21,7 @@
           "component": "selinux_adapter",
           "features": [
             "selinux_adapter_enforce = true",
-            "selinux_adapter_build_path = device/soc/unisoc/p7885/sepolicy/base:device/soc/unisoc/p7885/sepolicy/ext_policy:device/soc/unisoc/p7885/sepolicy/ohos_6.1"
+            "selinux_adapter_build_path = device/soc/unisoc/p7885/sepolicy/base:device/soc/unisoc/p7885/sepolicy/ext_policy:device/soc/unisoc/p7885/sepolicy/ohos_policy"
           ]
         }
       ]
