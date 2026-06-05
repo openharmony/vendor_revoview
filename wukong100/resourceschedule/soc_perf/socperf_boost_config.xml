@@ -14,71 +14,172 @@
  * limitations under the License.
  -->
 <Configs>
-    <cmd id="10000" name="app_start">
+    <cmd id="10000" name="app_cold_start">
         <Action>
             <duration>1500</duration>
-            <lit_cpu_min_freq>1992000</lit_cpu_min_freq>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10001" name="warm_start">
         <Action>
-            <duration>400</duration>
-            <lit_cpu_min_freq>1800000</lit_cpu_min_freq>
+            <duration>1000</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10002" name="window_switch">
         <Action>
-            <duration>400</duration>
-            <lit_cpu_min_freq>1608000</lit_cpu_min_freq>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10006" name="click_normal">
         <Action>
             <duration>250</duration>
-            <lit_cpu_min_freq>1992000</lit_cpu_min_freq>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10007" name="push_page_start">
         <Action>
-            <duration>300</duration>
-            <lit_cpu_min_freq>1608000</lit_cpu_min_freq>
+            <duration>1500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10008" name="list_fling">
         <Action>
-            <duration>5000</duration>
-            <lit_cpu_min_freq>1992000</lit_cpu_min_freq>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
         </Action>
     </cmd>
     <cmd id="10009" name="slide_normal">
         <Action>
-            <duration>5000</duration>
-            <lit_cpu_min_freq>1992000</lit_cpu_min_freq>
+            <duration>1000</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10010" name="touch_down_up">
         <Action>
-            <duration>100</duration>
-            <lit_cpu_min_freq>1608000</lit_cpu_min_freq>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
         </Action>
     </cmd>
     <cmd id="10011" name="push_page_complete">
         <Action>
-            <duration>200</duration>
-            <lit_cpu_min_freq>1416000</lit_cpu_min_freq>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
         </Action>
     </cmd>
     <cmd id="10012" name="web_gesture">
         <Action>
             <duration>800</duration>
-            <lit_cpu_min_freq>1992000</lit_cpu_min_freq>
-            <gpu_min_freq>800000000</gpu_min_freq>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
     <cmd id="10016" name="pop_page">
         <Action>
-            <duration>400</duration>
-            <lit_cpu_min_freq>1608000</lit_cpu_min_freq>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10018" name="resize_window">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10019" name="move_window">
+        <Action>
+            <duration>1500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10027" name="window_rotation">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10028" name="screen_on">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10029" name="screen_off">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10082" name="mode_full">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10083" name="mode_main">
+        <Action>
+            <duration>500</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
+        </Action>
+    </cmd>
+    <cmd id="10086" name="camera_state">
+        <Action>
+            <duration>1000</duration>
+            <lit_cpu0_min_freq>2184000</lit_cpu0_min_freq>
+            <lit_cpu4_min_freq>2301000</lit_cpu4_min_freq>
+            <lit_cpu7_min_freq>2704000</lit_cpu7_min_freq>
+            <gpu_min_freq>680000000</gpu_min_freq>
         </Action>
     </cmd>
 </Configs>
