@@ -1,0 +1,71 @@
+From 774d7c23342f85672c158660850b86b61650b390 Mon Sep 17 00:00:00 2001
+From: chenminghui <chenminghui@servicecenter-harmonytsc.com>
+Date: Tue, 28 Apr 2026 16:13:32 +0800
+Subject: [PATCH] =?UTF-8?q?=E6=B7=BB=E5=8A=A0normal=5Fvideo=E9=85=8D?=
+ =?UTF-8?q?=E7=BD=AE?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: chenminghui <chenminghui@servicecenter-harmonytsc.com>
+Change-Id: Ie41ca22167f6775e7ba9662cdf34ba1d78d8f667
+---
+ .../uhdf/camera/pipeline_core/config.hcs      | 43 +++++++++++++++++++
+ 1 file changed, 43 insertions(+)
+
+diff --git a/wukong100/hdf_config/uhdf/camera/pipeline_core/config.hcs b/wukong100/hdf_config/uhdf/camera/pipeline_core/config.hcs
+index b5e80e5..c64bad8 100644
+--- a/wukong100/hdf_config/uhdf/camera/pipeline_core/config.hcs
++++ b/wukong100/hdf_config/uhdf/camera/pipeline_core/config.hcs
+@@ -63,6 +63,49 @@ root {
+             }
+         }
+     }
++    normal_video :: pipeline_spec {
++        name = "normal_video";
++        v4l2_source :: node_spec {
++            name = "v4l2_source#0";
++            status = "new";
++            out_port_0 :: port_spec {
++                name = "out0";
++                peer_port_name = "in0";
++                peer_port_node_name = "Codec#0";
++                direction = 1;
++                width = 0;
++                height = 0;
++                format = 0;
++            }
++        }
++        Codec_1 :: node_spec {
++            name = "Codec#0";
++            status = "new";
++            in_port_0 :: port_spec {
++                name = "in0";
++                peer_port_name = "out0";
++                peer_port_node_name = "v4l2_source#0";
++                direction = 0;
++            }
++            out_port_0 :: port_spec {
++                name = "out0";
++                peer_port_name = "in0";
++                peer_port_node_name = "sink#0";
++                direction = 1;
++            }
++        }
++        sink :: node_spec {
++            name = "sink#0";
++            status = "new";
++            stream_type = "video";
++            in_port_0 :: port_spec {
++                name = "in0";
++                peer_port_name = "out0";
++                peer_port_node_name = "Codec#0";
++                direction = 0;
++            }
++        }
++    }
+     normal_preview_preview :: pipeline_spec {
+         name = "normal_preview_preview";
+         v4l2_source :: node_spec {
+-- 
+Gitee
