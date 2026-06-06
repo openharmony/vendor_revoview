@@ -322,9 +322,7 @@
         {
           "component": "skia",
           "features": [
-            "skia_feature_upgrade = true",
-            "skia_feature_use_vulkan = true",
-            "skia_feature_product = phone"
+            "skia_feature_upgrade = true"
           ]
         },
         {
@@ -369,7 +367,7 @@
             "graphic_2d_feature_rs_enable_eglimage = true",
             "graphic_2d_feature_use_igraphics_extend_hooks = false",
             "graphic_2d_feature_enable_opengl = true",
-            "graphic_2d_feature_enable_vulkan = true",
+            "graphic_2d_feature_enable_vulkan = false",
             "graphic_2d_feature_ace_enable_gpu = true",
             "graphic_2d_feature_rs_enable_uni_render = true",
             "graphic_2d_feature_use_texgine = true",
