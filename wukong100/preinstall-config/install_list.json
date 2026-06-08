@@ -150,7 +150,7 @@
         },
         {
             "app_dir" : "/system/app/com.ohos.UserFile.ExternalFileManager",
-            "removable" : true
+            "removable" : false
         },
         {
             "app_dir" : "/system/app/com.ohos.gameperceptio",
