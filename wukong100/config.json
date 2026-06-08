@@ -155,14 +155,6 @@
         {
           "component": "drivers_adapter",
           "features": []
-        },
-        {
-            "component": "drivers_tools",
-            "features": []
-        },
-        {
-          "component": "drivers_adapter",
-          "features": []
         }
       ]
     },
@@ -203,30 +195,6 @@
           "features": [
             "device_status_interaction_coordination = false"
           ]
-        }
-      ]
-    },
-    {
-      "subsystem": "communication",
-      "components": [
-        {
-          "component": "netmanager_ext",
-          "features": [],
-          "syscap": [
-            "SystemCapability.Communication.NetManager.NetFirewall = false"
-          ]
-        },
-        {
-          "component": "bluetooth_service",
-          "features": []
-        },
-        {
-          "component": "wifi",
-          "features": [
-            "wifi_feature_non_seperate_p2p = true",
-            "wifi_feature_non_hdf_driver = true",
-            "wifi_feature_p2p_random_mac_addr = true"
-         ]
         }
       ]
     },
@@ -481,23 +449,6 @@
           "features": [
             "window_manager_use_sceneboard = true"
           ]
-        }
-      ]
-    },
-    {
-          "component": "nfc",
-          "features": [
-            "nfc_service_feature_vendor_applications_enabled = true",
-            "nfc_sim_feature = false",
-            "nfc_use_vendor_nci_native = false"
-          ]
-    },
-    {
-      "subsystem": "filemanagement",
-      "components": [
-        {
-          "component": "file_monitor_service",
-          "features": []
         }
       ]
     }

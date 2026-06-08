@@ -34,62 +34,6 @@ ohos_prebuilt_etc("para_for_sys_prod") {
   part_name = "product_wukong100"
 }
 
-ohos_prebuilt_etc("para_for_variant") {
-  source = "./variant/唯一.ogg"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/audio/notifications/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_animationsounds") {
-  source = "./animationsounds/提示.ogg"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/audio/animationsounds/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_alarms") {
-  source = "./alarms/Tune.ogg"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/audio/alarms/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_ringtones") {
-  source = "./ringtones/Tune.ogg"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/audio/ringtones/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_ui") {
-  source = "./ui/比比拉布.ogg"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/audio/ui/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_non-synchronized") {
-  source = "./variant/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/gentle/non-synchronized/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_standard") {
-  source = "./animationsounds/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/standard/non-synchronized/"
-  part_name = "product_wukong100"
-}
-
-ohos_prebuilt_etc("para_for_notifications") {
-  source = "./alarms/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/gentle/synchronized/notifications/"
-  part_name = "product_wukong100"
-}
-
 ohos_prebuilt_etc("para_for_synchronized") {
   source = "./ringtones/紧急.json"
   install_images = [ sys_prod_base_dir ]
@@ -97,12 +41,6 @@ ohos_prebuilt_etc("para_for_synchronized") {
   part_name = "product_wukong100"
 }
 
-ohos_prebuilt_etc("para_for_haptics") {
-  source = "./ui/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/standard/synchronized/ringtones/"
-  part_name = "product_wukong100"
-}
 
 ohos_prebuilt_etc("para_for_gentle") {
   source = "./gentle/紧急.json"
@@ -174,12 +112,6 @@ ohos_prebuilt_etc("para_for_notifications") {
   part_name = "product_wukong100"
 }
 
-ohos_prebuilt_etc("para_for_synchronized") {
-  source = "./ringtones/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/standard/synchronized/alarms/"
-  part_name = "product_wukong100"
-}
 
 ohos_prebuilt_etc("para_for_haptics") {
   source = "./ui/紧急.json"
@@ -188,12 +120,6 @@ ohos_prebuilt_etc("para_for_haptics") {
   part_name = "product_wukong100"
 }
 
-ohos_prebuilt_etc("para_for_gentle") {
-  source = "./gentle/紧急.json"
-  install_images = [ sys_prod_base_dir ]
-  relative_install_dir= "../variant/region_comm/china/resource/media/haptics/standard/synchronized/notifications/"
-  part_name = "product_wukong100"
-}
 
 ohos_prebuilt_etc("passwd") {
   source = "./passwd"
@@ -257,7 +183,6 @@ group("product_etc_conf") {
     ":Settings_OpenSource_config",
     ":gesture_navigation_setting_config",
     ":poweroff_config_config",
-    ":custom_param",
     ":para_for_variant",
     ":para_for_animationsounds",
     ":para_for_alarms",
