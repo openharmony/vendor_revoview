@@ -436,9 +436,6 @@
           "syscap": [
             "SystemCapability.Telephony.CoreService.Esim = false"
           ]
-        },
-        {
-          "component": "number_identity"
         }
       ]
     },
