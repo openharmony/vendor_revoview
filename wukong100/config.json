@@ -198,7 +198,7 @@
         }
       ]
     },
-    {
+    { 
       "subsystem": "communication",
       "components": [
         {
@@ -230,7 +230,7 @@
           "features": [
             "audio_framework_feature_dtmf_tone = true",
             "audio_framework_feature_opensl_es = true",
-            "audio_framework_feature_support_os_account = false",
+            "audio_framework_feature_support_os_account = true",
             "audio_framework_feature_audiosuite_support = true",
             "audio_framework_feature_source_period_size = 5"
           ]
@@ -457,6 +457,17 @@
         {
           "component": "ace_ets2bundle",
           "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "window",
+      "components": [
+        {
+          "component": "window_manager",
+          "features": [
+            "window_manager_use_sceneboard = true"
+          ]
         }
       ]
     }

@@ -629,6 +629,7 @@ bypass_window_manager = [
   "wms_systemtest_common",  #cfi not configured
   "libwm_lite",  #cfi not configured
   "libdm",  #cfi not configured
+  "dm_unittest_common_lite",  #cfi not configured
 ]
 
 bypass_qos_manager = [
