@@ -10,7 +10,7 @@
   "enable_ramdisk": true,
   "enable_absystem": false,
   "build_selinux": true,
-  "build_seccomp": false,
+  "build_seccomp": true,
   "device_stack_size": 8388608,
   "inherit": [ "productdefine/common/inherit/rich.json", "productdefine/common/inherit/chipset_common.json" ],
   "subsystems": [
@@ -20,7 +20,7 @@
         {
           "component": "selinux_adapter",
           "features": [
-            "selinux_adapter_enforce = true",
+            "selinux_adapter_enforce = false",
             "selinux_adapter_build_path = device/soc/unisoc/p7885/sepolicy/base:device/soc/unisoc/p7885/sepolicy/ext_policy:device/soc/unisoc/p7885/sepolicy/ohos_policy"
           ]
         }
