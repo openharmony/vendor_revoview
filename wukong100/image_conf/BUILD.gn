@@ -29,10 +29,14 @@ ohos_copy("updater_ramdisk_image_conf_for_asan") {
   outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
 }
 } else {
-ohos_copy("system_image_conf") {
-  sources = [ "system_image_conf.txt" ]
-  outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
-}
+  ohos_copy("system_image_conf") {
+    sources = [ "system_image_conf.txt" ]
+    outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
+  }
+  ohos_copy("userdata_image_conf") {
+    sources = [ "userdata_image_conf.txt" ]
+    outputs = [ "${product_output_dir}/imagesconf/{{source_file_part}}" ]
+  }
 }
 
 group("custom_image_conf") {
@@ -45,6 +49,7 @@ group("custom_image_conf") {
   } else {
     deps = [
       ":system_image_conf",
+      ":userdata_image_conf",
     ] 
   }
 }
