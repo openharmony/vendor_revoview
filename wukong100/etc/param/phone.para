@@ -13,6 +13,16 @@
 
 const.product.brand=default
 const.build.product=default
+persist.multimedia.image.astc.enabled=false
+
+const.filemanager.full_mount.enable = true
+
+const.product.preview.device_config=2
+const.product.preview.enable_uiservice=false
+const.abilityms.enable_uiservice=false
+const.window.multiWindowUIType=HandsetSmartWindow
+persist.systemui.live2 = true
+
 const.multimedia.system_tone_sim_card_0=Tune.ogg
 const.multimedia.system_tone_sim_card_1=Tune.ogg
 const.multimedia.notification_tone=win.ogg
