@@ -30,7 +30,7 @@ This repository is used to store HDF configuration information, product definiti
 
 ## Usage
 
-[WUKONG100 Development Board User Guide](https://gitcode.com/openharmony-sig/device_board_revoview/blob/OpenHarmony_standard_p7885_rk3588_d3000m_20251103/wukong100/README_zh.md)
+[WUKONG100 Development Board User Guide](https://gitcode.com/openharmony/device_board_revoview/blob/master/wukong100/README_EN.md)
 
 
 ## License
@@ -40,6 +40,6 @@ See the LICENSE file in this directory.
 
 ## Related Repositories
 
-[device_board_revoview](https://gitcode.com/openharmony-sig/device_board_revoview)
+[device_board_revoview](https://gitcode.com/openharmony/device_board_revoview)
 
-[device_soc_unisoc](https://gitcode.com/openharmony-sig/device_soc_unisoc)
+[device_soc_unisoc](https://gitcode.com/openharmony/device_soc_unisoc)

@@ -30,7 +30,7 @@
 
 ## 使用方法
 
-[WUKONG100开发板使用说明](https://gitcode.com/openharmony-sig/device_board_revoview/blob/OpenHarmony_standard_p7885_rk3588_d3000m_20251103/wukong100/README_zh.md)
+[WUKONG100开发板使用说明](https://gitcode.com/openharmony/device_board_revoview/blob/master/wukong100/README_zh.md)
 
 
 ## 许可说明
@@ -40,7 +40,7 @@
 
 ## 相关仓
 
-[device_board_revoview](https://gitcode.com/openharmony-sig/device_board_revoview)
+[device_board_revoview](https://gitcode.com/openharmony/device_board_revoview)
 
-[device_soc_unisoc](https://gitcode.com/openharmony-sig/device_soc_unisoc)
+[device_soc_unisoc](https://gitcode.com/openharmony/device_soc_unisoc)
 
