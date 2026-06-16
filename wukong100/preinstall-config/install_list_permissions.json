@@ -689,5 +689,11 @@
                 "userCancellable" : false
             }
         ]
+    },
+    {
+        "bundleName": "com.ohos.calculator",
+        "app_signature" : [
+            "6D2E474CE933386B461600B03B5930FF40CAE2933D1A731E370EC067ADCCA299"
+        ]
     }
 ]
