@@ -22,6 +22,7 @@ const.product.preview.enable_uiservice=false
 const.abilityms.enable_uiservice=false
 const.window.multiWindowUIType=HandsetSmartWindow
 persist.systemui.live2 = true
+persist.sys.graphic.GpuApitype = 1
 
 const.multimedia.system_tone_sim_card_0=Tune.ogg
 const.multimedia.system_tone_sim_card_1=Tune.ogg
