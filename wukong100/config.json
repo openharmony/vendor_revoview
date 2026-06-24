@@ -27,6 +27,15 @@
       ]
     },
     {
+      "subsystem": "arkcompiler",
+      "components": [
+        {
+          "component": "jsvm",
+          "features": []
+        }
+      ]
+    },
+    {
       "subsystem": "device_wukong100",
       "components": [
         {
