@@ -107,7 +107,16 @@
         },
         {
           "component": "drivers_interface_audio",
-          "features": []
+          "features": [
+            "drivers_interface_audio_community = true",
+            "drivers_interface_audio_feature_alsa_lib = true"
+          ]
+        },
+        {
+          "component": "drivers_interface_display",
+          "features": [
+            "drivers_interface_display_community = true"
+          ]
         },
         {
           "component": "drivers_peripheral_audio",
