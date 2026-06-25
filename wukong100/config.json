@@ -113,6 +113,12 @@
           ]
         },
         {
+          "component": "drivers_interface_display",
+          "features": [
+            "drivers_interface_display_community = true"
+          ]
+        },
+        {
           "component": "drivers_peripheral_audio",
           "features": [
             "drivers_peripheral_audio_feature_full_test_suite = true",
