@@ -486,7 +486,8 @@
         {
           "component": "window_manager",
           "features": [
-            "window_manager_use_sceneboard = true"
+            "window_manager_use_sceneboard = true",
+            "SystemCapability.Window.SessionManager = true"
           ]
         }
       ]
