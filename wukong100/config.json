@@ -487,6 +487,9 @@
           "component": "window_manager",
           "features": [
             "window_manager_use_sceneboard = true"
+          ],
+          "syscap": [
+            "SystemCapability.Window.SessionManager = true"
           ]
         }
       ]
