@@ -49,7 +49,7 @@ root {
                 role = 2;
                 type = 1;
                 name = "OMX.sprd.h265.encoder";
-                supportProfiles = [2, 32768];
+                supportProfiles = [1, 32768];
                 maxInst = 6;
                 isSoftwareCodec = false;
                 processModeMask = [];
