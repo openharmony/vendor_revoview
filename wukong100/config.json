@@ -35,8 +35,7 @@
             "device_wukong100_feature_preview_buffer_num = 8",
             "device_wukong100_feature_photo_buffer_num = 3",
             "device_wukong100_feature_return_timeout = 1500",
-            "device_wukong100_feature_buffer_partial_usage = true",
-            "device_wukong100_feature_stillcapture_discontinuous = true"
+            "device_wukong100_feature_buffer_partial_usage = true"
           ]
         }
       ]
