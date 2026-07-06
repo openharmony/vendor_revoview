@@ -87,8 +87,8 @@ root {
                 capsMask = [0x01];
                 minBitRate = 1;
                 maxBitRate = 10000000;
-                minWidth = 176;
-                minHeight = 144;
+                minWidth = 64;
+                minHeight = 64;
                 maxWidth = 4096;
                 maxHeight = 2160;
                 widthAlignment = 1;
@@ -116,8 +116,8 @@ root {
                 capsMask = [0x01];
                 minBitRate = 1;
                 maxBitRate = 10000000;
-                minWidth = 176;
-                minHeight = 144;
+                minWidth = 64;
+                minHeight = 64;
                 maxWidth = 4096;
                 maxHeight = 2160;
                 widthAlignment = 1;
