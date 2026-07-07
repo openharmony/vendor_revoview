@@ -141,7 +141,7 @@
           "features": [
             "drivers_peripheral_display_community = true",
             "drivers_peripheral_display_vdi_default = true",
-            "drivers_peripheral_display_feature_p7885"
+            "drivers_peripheral_display_feature_p7885 = true"
           ]
         },
         {
