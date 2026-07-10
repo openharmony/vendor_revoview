@@ -143,7 +143,8 @@
             "bundleName": "com.ohos.dlpmanager",
             "app_signature": [
                 "E3F4322139E0109BAFAD8DA4096762068E31708C3CF201780E736D377D60B639",
-                "5FEDFF587F4109E565B96512404D606D539C8DFFCE1424ACBD1B2A7D3E843D4D"
+                "5FEDFF587F4109E565B96512404D606D539C8DFFCE1424ACBD1B2A7D3E843D4D",
+                "5765880207853296051"
             ],
             "allowAppUsePrivilegeExtension": true,
             "allowAppDesktopIconHide": true
