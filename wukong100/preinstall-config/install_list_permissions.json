@@ -269,7 +269,10 @@
     },
     {
         "bundleName": "com.ohos.permissionmanager",
-        "app_signature" : ["68079CC9CB1BD69283D70790305645FFF61CD1E46CAFD7AA53B9FA8540432B81"],
+        "app_signature" : [
+            "68079CC9CB1BD69283D70790305645FFF61CD1E46CAFD7AA53B9FA8540432B81",
+            "5765880207853296051"
+        ],
         "permissions" : [
             {
                 "name" : "ohos.permission.GET_INSTALLED_BUNDLE_LIST",
