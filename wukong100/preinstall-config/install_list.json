@@ -14,7 +14,7 @@
         },
         {
             "app_dir" : "/system/app/com.ohos.note",
-            "removable" : false
+            "removable" : true
         },
         {
             "app_dir" : "/system/app/com.ohos.settingsdata",
@@ -34,7 +34,7 @@
         },
         {
             "app_dir" : "/system/app/com.example.distributedcalc",
-            "removable" : false
+            "removable" : true
         },
         {
             "app_dir" : "/system/app/ohos.samples.flashlight",
@@ -50,7 +50,7 @@
         },
         {
             "app_dir" : "/system/app/com.ohos.distributedmusicplayer",
-            "removable" : false
+            "removable" : true
         },
         {
             "app_dir" : "/system/app/com.ohos.camera",
@@ -78,6 +78,22 @@
         },
         {
             "app_dir" : "/system/app/com.ohos.callui",
+            "removable" : false
+        },
+        {
+            "app_dir" : "/system/app/com.ohos.callsetting",
+            "removable" : false
+        },
+        {
+            "app_dir" : "/system/app/com.ohos.emergencycommunication",
+            "removable" : false
+        },
+        {
+            "app_dir" : "/system/app/com.ohos.communicationsetting",
+            "removable" : false
+        },
+        {
+            "app_dir" : "/system/app/com.ohos.callrecorder",
             "removable" : false
         },
         {
@@ -214,6 +230,50 @@
         },
         {
             "app_dir": "/system/app/com.ohos.security.privacycenter",
+            "removable": true
+        },
+        {
+            "app_dir": "/system/app/com.ohos.filemanager",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/SceneBoard",
+            "removable": false
+        },
+		{
+            "app_dir": "/system/app/com.ohos.floatingnavigation",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.intelligentscene",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.certmanager",
+            "removable": true
+        },
+		{
+            "app_dir": "/system/app/com.ohos.numberidentityability",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.clock",
+            "removable": true
+        },
+        {
+            "app_dir": "/system/app/PortalLogin",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.hmos.mediacontroller",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.preview_system_app",
+            "removable": false
+        },
+          {
+            "app_dir": "/system/app/com.ohos.harmonykey",
             "removable": true
         }
     ]

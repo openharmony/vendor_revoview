@@ -60,7 +60,7 @@
                 <!--animation duration, unit is ms-->
                 <duration>150</duration>
                 <!--friction curve-->
-                <curve name="cubic">0.2 0.0 0.2 1.0</curve>
+                <curve name="interpolatingSpring">0.0 1.0 342.0 37.0</curve>
             </timing>
         </animationIn>
         <!--animation when remove keyboard-->
@@ -69,7 +69,7 @@
                 <!--animation duration, unit is ms-->
                 <duration>150</duration>
                 <!--friction curve-->
-                <curve name="cubic">0.2 0.0 0.2 1.0</curve>
+                <curve name="interpolatingSpring">0.0 1.0 342.0 37.0</curve>
             </timing>
         </animationOut>
     </keyboardAnimation>
