@@ -24,8 +24,8 @@ root {
                     }
 
                     pinConfig {
-                        rstGpio = 14;
-                        intGpio = 13;
+                        rstGpio = 133;
+                        intGpio = 132;
                         rstRegCfg = [0x112f0094, 0x400];
                         intRegCfg = [0x112f0098, 0x400];
                     }
