@@ -332,6 +332,15 @@
                     serviceName = "hdf_input_event1";
                     deviceMatchAttr = "touch_device1";
                 }
+                device1 :: deviceNode {
+                    policy = 0;
+                    priority = 130;
+                    preload = 0;
+                    permission = 0660;
+                    moduleName = "HDF_TOUCH_DUMMY";
+                    serviceName = "hdf_touch_dummy_service";
+                    deviceMatchAttr = "zsj_gt911_5p5";
+                }
             }
 
             device_touch_chip :: device {
