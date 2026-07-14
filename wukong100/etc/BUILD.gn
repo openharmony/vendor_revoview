@@ -173,6 +173,12 @@ ohos_prebuilt_etc("product_bt_device_config") {
   subsystem_name = "product_wukong100"
 }
 
+ ohos_prebuilt_etc("custom_param") {
+ 	source = "./param/phone.para"
+ 	relative_install_dir = "param"
+ 	part_name = "product_wukong100"
+}
+
 
 group("product_etc_conf") {
   deps = [
