@@ -124,8 +124,7 @@
           "features": [
             "drivers_peripheral_camera_feature_board_config = true",
             "drivers_peripheral_camera_feature_host_codec = true",
-            "drivers_peripheral_camera_feature_batch_buffers = true",
-            "drivers_peripheral_camera_feature_Distribute_timeout = 500"
+            "drivers_peripheral_camera_feature_batch_buffers = true"
           ]
         },
         {
