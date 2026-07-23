@@ -306,12 +306,6 @@
           "features": []
         },
         {
-          "component": "qrcodegen",
-          "features": [
-            "qrcodegen_feature_ace_engine_qrcode_able = true"
-          ]
-        },
-        {
           "component": "alsa-lib",
           "features": [
             "alsa_lib_feature_config_enable = true"
@@ -491,6 +485,15 @@
           "syscap": [
             "SystemCapability.Window.SessionManager = true"
           ]
+        }
+      ]
+    },
+    {
+      "subsystem": "commonlibrary",
+      "components": [
+        {
+          "component": "qrcode_generator",
+          "features": []
         }
       ]
     }
