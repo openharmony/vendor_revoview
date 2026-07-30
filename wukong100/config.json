@@ -387,7 +387,7 @@
             "graphic_2d_feature_rs_enable_uni_render = true",
             "graphic_2d_feature_use_texgine = true",
             "graphic_2d_feature_upgrade_skia = true",
-            "graphic_2d_feature_p7885 = true"
+            "graphic_2d_feature_enable_swap_ycbcr_channel = true"
           ]
         },
         {
