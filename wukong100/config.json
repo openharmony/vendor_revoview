@@ -255,6 +255,12 @@
           "features": [
             "image_framework_feature_upgrade_skia = true"
           ]
+        },
+        {
+          "component": "av_session",
+          "syscap": [
+            "SystemCapability.Multimedia.AVSession.AVInputCast = true"
+          ]
         }
       ]
     },
