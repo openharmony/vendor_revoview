@@ -89,6 +89,7 @@ se_service:x:3064:
 deviceauth:x:3333:
 huks_server:x:3510:
 asset_service:x:6226:
+secure_access_fence:x:7771:
 cert_manager_server:x:3515:
 device_cert_manager_server:x:3562:
 dlp_credential:x:3553:
@@ -170,3 +171,5 @@ sandbox_manager:x:3076:
 nnrt_host:x:3311:
 app_fwk_update:x:3350:
 sysselection:x:1080:
+object_editor_service:x:7061:
+midi_server:x:1044:
