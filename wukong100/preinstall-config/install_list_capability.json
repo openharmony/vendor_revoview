@@ -98,7 +98,7 @@
         },
         {
             "bundleName": "com.ohos.backgroundtaskmgr.resources",
-            "app_signature" : ["72BE2C651A9E0C57B4BB67825BA6F8180FC883858434712150A55C17C7E1A6F7"],
+            "app_signature" : ["EFDBE35DD45860CE04BA8DB3F38C0DA15233F6FDEC2B031D1721923FFA5E309C"],
             "singleton": true,
             "allowAppDesktopIconHide": true
         },
