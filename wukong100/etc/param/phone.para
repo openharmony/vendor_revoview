@@ -22,7 +22,7 @@ const.product.preview.enable_uiservice=false
 const.abilityms.enable_uiservice=false
 const.window.multiWindowUIType=HandsetSmartWindow
 persist.systemui.live2 = true
-persist.sys.graphic.GpuApitype = 1
+persist.sys.graphic.GpuApitype = 0
 abilitymanagerservice.support.appgallery.selector=false
 
 const.multimedia.system_tone_sim_card_0=Tune.ogg
