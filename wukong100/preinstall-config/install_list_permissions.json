@@ -698,5 +698,169 @@
         "app_signature" : [
             "6D2E474CE933386B461600B03B5930FF40CAE2933D1A731E370EC067ADCCA299"
         ]
+    },
+    {
+        "bundleName": "com.ohos.calendar",
+        "app_signature": [
+            "8E93863FC32EE238060BF69A9B37E2608FFFB21F93C862DD511CBAC9F30024B5"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.MANAGE_SETTINGS",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.ACCESS_SEARCH_SERVICE",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.REQUIRE_FORM",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.NOTIFICATION_CONTROLLER",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_WHOLE_CALENDAR",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.READ_WHOLE_CALENDAR",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.READ_CONTACTS",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.READ_IMAGEVIDEO",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.PROXY_AUTHORIZATION_URI",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_RINGTONE",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.ACCESS_BUNDLE_DIR",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.LAUNCH_DATA_PRIVACY_CENTER",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.VIBRATE",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_CALENDAR",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.READ_CALENDAR",
+                "userCancellable": false
+            }
+        ]
+    },
+    {
+        "bundleName": "com.ohos.calendardata",
+        "app_signature": [
+            "8E93863FC32EE238060BF69A9B37E2608FFFB21F93C862DD511CBAC9F30024B5"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.PUBLISH_AGENT_REMINDER",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.NOTIFICATION_CONTROLLER",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.NOTIFICATION_AGENT_CONTROLLER",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.PERMISSION_USED_STATS",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_WHOLE_CALENDAR",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.READ_WHOLE_CALENDAR",
+                "userCancellable": false
+            }
+        ]
+    },
+    {
+        "bundleName": "com.ohos.simcardmanagement",
+        "app_signature": [
+            "96F1C9F6D49E8A450AC1025D74A122DB73DB6D1DF78B1B1E4BC3A99FA06C796E"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.GET_NETWORK_INFO",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.SET_TELEPHONY_STATE",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.GET_TELEPHONY_STATE",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.USE_USER_IDM",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.ACCESS_BIOMETRIC",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.PRIVACY_WINDOW",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.ACCESS_SYSTEM_SETTINGS",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.MANAGE_SETTINGS",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.GET_BUNDLE_INFO",
+                "userCancellable": false
+            }
+        ]
+    },
+    {
+        "bundleName": "com.ohos.soundrecorder",
+        "app_signature": [
+            "AE4E2D1B5EAC912B590724027A65FE24C02123BF6CEE8BC4626EF781221AAAF8"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.READ_AUDIO",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_AUDIO",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.GET_TELEPHONY_STATE",
+                "userCancellable": false
+            }
+        ]
     }
 ]

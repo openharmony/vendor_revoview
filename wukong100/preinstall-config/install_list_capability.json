@@ -272,9 +272,11 @@
             "allowAppUsePrivilegeExtension" : true,
             "allowAppDesktopIconHide": true
         },
-        {
+         {
             "bundleName": "com.ohos.calendardata",
-            "app_signature" : ["CC249153FA175206B1427C71DB0F2232D91FA4B2ED7955AE1D6EBA4C362D359A"],
+            "app_signature": [
+                "8E93863FC32EE238060BF69A9B37E2608FFFB21F93C862DD511CBAC9F30024B5"
+            ],
             "allowAppDesktopIconHide": true,
             "allowAppUsePrivilegeExtension": true
         },
@@ -382,6 +384,45 @@
             "app_signature" : ["6D2E474CE933386B461600B03B5930FF40CAE2933D1A731E370EC067ADCCA299"],
             "allowAppDesktopIconHide": false,
             "allowAppUsePrivilegeExtension": true
+        },
+        {
+            "bundleName": "com.ohos.calendar",
+            "app_signature": [
+                "8E93863FC32EE238060BF69A9B37E2608FFFB21F93C862DD511CBAC9F30024B5"
+            ],
+            "allowAppDesktopIconHide": false,
+            "allowAppUsePrivilegeExtension": true
+        },
+        {
+            "bundleName": "com.ohos.simcardmanagement",
+            "app_signature": [
+                "96F1C9F6D49E8A450AC1025D74A122DB73DB6D1DF78B1B1E4BC3A99FA06C796E"
+            ],
+            "allowAppUsePrivilegeExtension": false,
+            "allowAppDesktopIconHide": true
+        },
+        {
+            "bundleName": "com.ohos.tips",
+            "app_signature": [
+                "DE99136A8BD141179B51EA3D8CF8402BBA4D6646063D7E35CA8E90E117D3F2CD"
+            ],
+            "allowAppUsePrivilegeExtension": true
+        },
+        {
+            "bundleName": "com.ohos.soundrecorder",
+            "app_signature": [
+                "AE4E2D1B5EAC912B590724027A65FE24C02123BF6CEE8BC4626EF781221AAAF8"
+            ],
+            "allowAppDesktopIconHide": false,
+            "allowAppUsePrivilegeExtension": true
+        },
+        {
+            "bundleName": "com.ohos.startup_guide",
+            "app_signature": [
+                "0716E4E8C9B8CEEF6A974CD2289D5C4C668A5B41FA5DF8C0542DCB72602371F5"
+            ],
+            "allowAppUsePrivilegeExtension": true,
+            "allowAppDesktopIconHide": true
         }
     ]
 }
