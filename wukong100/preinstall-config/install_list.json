@@ -275,6 +275,26 @@
           {
             "app_dir": "/system/app/com.ohos.harmonykey",
             "removable": true
+        },
+        {
+            "app_dir": "/system/app/com.ohos.calendar",
+            "removable": true
+        },
+        {
+            "app_dir": "/system/app/com.ohos.simcardmanagement",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.tips",
+            "removable": true
+        },
+        {
+            "app_dir": "/system/app/com.ohos.soundrecorder",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.startup_guide",
+            "removable": false
         }
     ]
 }
