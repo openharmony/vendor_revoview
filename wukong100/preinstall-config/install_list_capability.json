@@ -262,7 +262,7 @@
         },
         {
             "bundleName": "com.ohos.updateapp",
-            "app_signature" : ["BA6EBDF53DD63B7D5616F3789F8C15FD4DE134B2587C577B01DA4D027B44A23C"],
+            "app_signature" : ["10D24289D54C428BED11C7F584410D9D847E2D6F0D8CACBBC3AD9491F3EFDE8A"],
             "allowAppUsePrivilegeExtension": true
         },
         {
