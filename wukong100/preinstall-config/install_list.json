@@ -295,6 +295,14 @@
         {
             "app_dir": "/system/app/com.ohos.startup_guide",
             "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.players",
+            "removable": false
+        },
+        {
+            "app_dir": "/system/app/com.ohos.browser",
+            "removable": false
         }
     ]
 }
