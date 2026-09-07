@@ -862,5 +862,74 @@
                 "userCancellable": false
             }
         ]
+    },
+    {
+        "bundleName": "com.ohos.players",
+        "app_signature": [
+            "0CECFA7A75E1F7FE9B5382E0EF3E8D178510AF8A6D76EE624A9CCADB9FBC65B0"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.READ_IMAGEVIDEO",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.WRITE_IMAGEVIDEO",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.READ_AUDIO",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.WRITE_AUDIO",
+                "userCancellable": true
+            }
+        ]
+    },
+    {
+        "bundleName": "com.ohos.browser",
+        "app_signature": [
+            "0CECFA7A75E1F7FE9B5382E0EF3E8D178510AF8A6D76EE624A9CCADB9FBC65B0",
+            "0716E4E8C9B8CEEF6A974CD2289D5C4C668A5B41FA5DF8C0542DCB72602371F5"
+        ],
+        "permissions": [
+            {
+                "name": "ohos.permission.INTERNET",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.GET_NETWORK_INFO",
+                "userCancellable": false
+            },
+            {
+                "name": "ohos.permission.WRITE_IMAGEVIDEO",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.READ_IMAGEVIDEO",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.READ_WRITE_DOWNLOAD_DIRECTORY",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.APPROXIMATELY_LOCATION",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.LOCATION",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.CAMERA",
+                "userCancellable": true
+            },
+            {
+                "name": "ohos.permission.MICROPHONE",
+                "userCancellable": true
+            }
+        ]
     }
 ]
