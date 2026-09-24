@@ -47,8 +47,11 @@ HCS_OBJ_SRC := $(subst .o,.c,$(notdir $(HCS_OBJ)))
 CONFIG_GEN_HEX_SRC := $(addprefix $(LOCAL_HCS_ROOT)/, $(HCS_OBJ_SRC))
 CONFIG_HCS_SRC := $(subst _hcs_hex.o,.hcs,$(addprefix $(HCS_DIR)/, $(HCS_OBJ)))
 
-$(obj)/$(HCS_OBJ): $(CONFIG_GEN_HEX_SRC)
-	$(Q)$(CC) $(c_flags) -c -o $@ $<
+quiet_cmd_cc_hcs_hex = CC      $@
+      cmd_cc_hcs_hex = $(CC) $(c_flags) -c -o $@ $<
+
+$(obj)/$(HCS_OBJ): $(CONFIG_GEN_HEX_SRC) FORCE
+	$(call if_changed,cc_hcs_hex)
 	$(Q)rm -f $<
 
 $(CONFIG_GEN_HEX_SRC):  $(LOCAL_HCS_ROOT)/%_hcs_hex.c: $(HCS_DIR)/%.hcs | $(HC_GEN)
