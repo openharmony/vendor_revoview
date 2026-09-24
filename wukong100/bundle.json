@@ -44,6 +44,7 @@
           "//vendor/revoview/wukong100/hdf_config/uhdf:hdf_config",
           "//vendor/revoview/wukong100/window_config:window_config",
           "//vendor/revoview/wukong100/audio_conf:product_audio_conf",
+	  "//vendor/revoview/wukong100/modules:modules",
           "//vendor/revoview/wukong100/app:test_app"
         ],
         "inner_kits":[
